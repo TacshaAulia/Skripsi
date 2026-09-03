@@ -1,0 +1,162 @@
+Timestamp,Status Responden,Nama Lengkap,Program Studi,Semester,Jenis Kelamin,Nama Lengkap,Program Studi,Tahun Lulus,Variabel X1 [Saya tertarik mempelajari metode pembelajaran dan pendidikan.],Variabel X1 [Saya tertarik melakukan penelitian dan pengembangan ilmu pengetahuan.],Variabel X1 [Saya tertarik mengembangkan teknologi digital dan aplikasi.],Variabel X1 [Saya tertarik menganalisis data untuk menghasilkan informasi yang bermanfaat.],"Variabel X1 [Saya tertarik mempelajari Artificial Intelligence, Machine Learning, dan Data Science.]",Variabel X1 [Saya tertarik terlibat dalam kegiatan pengabdian kepada masyarakat.],"Variabel X1 [Saya tertarik pada isu sosial, lingkungan, dan pembangunan masyarakat.]",Variabel X1 [Saya tertarik menciptakan produk atau layanan baru yang bermanfaat.],Variabel X1 [Saya tertarik mengembangkan usaha atau bisnis secara mandiri.],Variabel X1 [Saya tertarik memimpin organisasi atau tim dalam suatu kegiatan.],Variabel X2 [Saya lebih mudah memahami materi melalui praktik langsung.],Variabel X2 [Saya senang belajar melalui proyek atau tugas nyata.],"Variabel X2 [Saya senang menganalisis data, fakta, dan informasi sebelum mengambil keputusan.]",Variabel X2 [Saya senang belajar secara mandiri dan mengeksplorasi referensi baru.],Variabel X2 [Saya senang menggunakan teknologi digital dalam proses belajar.],Variabel X2 [Saya senang berdiskusi dan bertukar ide dengan orang lain.],Variabel X2 [Saya senang bekerja sama dalam tim untuk menyelesaikan suatu tugas.],Variabel X2 [Saya senang memecahkan masalah yang kompleks dan menantang.],Variabel X2 [Saya terbiasa menyusun rencana sebelum melaksanakan pekerjaan atau kegiatan.],Variabel X2 [Saya senang mencoba metode atau pendekatan baru dalam belajar maupun bekerja.],Variabel X3 [Saya ingin menjadi pendidik atau instruktur profesional.],Variabel X3 [Saya ingin menjadi peneliti atau akademisi.],Variabel X3 [Saya ingin bekerja sebagai software developer atau IT specialist.],Variabel X3 [Saya ingin bekerja sebagai data analyst atau data scientist.],Variabel X3 [Saya ingin berkarier di bidang teknologi digital dan sistem informasi.],Variabel X3 [Saya ingin berkontribusi dalam kegiatan pemberdayaan masyarakat.],"Variabel X3 [Saya ingin bekerja di bidang sosial, kesehatan, atau pembangunan wilayah.]",Variabel X3 [Saya ingin membangun usaha atau bisnis sendiri.],Variabel X3 [Saya ingin menciptakan inovasi yang memiliki nilai ekonomi maupun sosial.],Variabel X3 [Saya ingin menduduki posisi manajerial atau pimpinan organisasi.]
+07/08/2026 23:05:39,Mahasiswa,Salma mei,Teknik Informatika,8,P,,,,5,4,3,3,3,2,3,3,3,3,4,4,3,4,4,3,4,3,3,4,4,3,5,5,5,5,2,4,4,3
+07/08/2026 23:07:38,Mahasiswa,fenti ,Teknik Informatika,8,P,,,,4,4,4,4,4,5,3,4,5,4,5,4,4,4,4,4,4,4,3,4,4,4,4,4,5,5,4,5,5,4
+07/08/2026 23:15:32,Mahasiswa,Septian Cikal Nugraha ,Teknik Informatika,8,L,,,,3,3,5,3,5,3,3,3,3,3,5,5,5,5,5,5,5,5,5,5,3,3,5,3,5,3,3,5,5,5
+07/08/2026 23:16:17,Mahasiswa,Salsa Widia,Yang lain:,6,P,,,,3,3,3,4,4,4,4,4,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,4,4
+07/08/2026 23:24:32,Mahasiswa,Aldit Sheva Osyana ,Teknik Informatika,8,L,,,,3,2,5,3,3,4,5,3,4,3,3,4,4,3,3,4,4,4,3,2,3,3,4,4,3,4,4,3,3,3
+07/08/2026 23:27:30,Mahasiswa,Aldit Sheva Osyana,Teknik Informatika,8,L,,,,4,3,3,3,4,4,4,4,3,4,4,4,4,3,3,4,4,3,3,4,4,4,5,5,4,4,4,4,3,3
+07/08/2026 23:27:55,Mahasiswa,Nola kurnia,Agribisnis,8,P,,,,4,4,4,3,3,4,4,4,4,4,4,4,4,4,3,4,4,4,3,4,3,3,4,3,3,4,3,4,4,3
+07/08/2026 23:29:08,Alumni,,,,,Primasari ,Akuntansi,2025,5,5,5,5,5,4,5,5,5,3,5,5,5,5,5,5,4,5,5,5,4,4,5,5,5,5,5,5,5,4
+07/08/2026 23:30:00,Mahasiswa,Hanhan Halimah,Sistem Informasi,8,P,,,,4,4,4,4,4,4,4,4,5,4,4,4,4,4,4,4,4,3,3,4,4,3,4,4,4,4,4,5,4,4
+07/08/2026 23:33:45,Alumni,,,,,Taufik Burhannudin ,Yang lain:,2025,4,3,5,4,3,4,4,4,5,1,5,5,3,5,4,4,4,3,4,4,3,4,2,4,5,4,3,4,5,4
+07/08/2026 23:37:04,Mahasiswa,NABILA RAHMI FUADAH,Teknik Informatika,8,P,,,,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+07/08/2026 23:42:13,Alumni,,,,,Mohammad Anwar Saepuddin ,Teknik Informatika,2025,4,4,3,4,3,5,4,4,4,3,4,5,4,3,4,4,5,4,5,4,3,3,3,3,3,3,3,4,5,5
+07/08/2026 23:48:23,Alumni,,,,,Muhammad Jauhari Insan Rabbani,Teknik Informatika,2025,4,4,4,4,4,4,4,3,4,3,4,4,4,3,4,4,4,3,3,3,3,3,3,3,4,4,2,4,4,3
+07/08/2026 23:49:59,Alumni,,,,,Muhammad Ridwan Fahmi,Akuntansi,2025,5,4,5,4,5,4,5,4,5,4,5,4,5,4,4,4,5,4,3,5,3,4,5,4,5,5,4,4,5,4
+08/08/2026 0:02:08,Mahasiswa,Rahma Fauzi,Teknik Informatika,6,L,,,,3,3,4,4,4,4,4,4,5,4,5,5,3,3,4,5,5,4,4,3,3,3,3,3,3,3,4,5,4,5
+08/08/2026 0:09:30,Alumni,,,,,Munawarotul ,Yang lain:,2023,3,4,3,4,3,4,3,4,4,4,5,5,5,4,4,4,4,4,5,3,3,3,2,2,2,2,2,4,3,4
+08/08/2026 0:13:21,Mahasiswa,Isma Rahmayanti ,Sistem Informasi,5,P,,,,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,5,5,5,4,2,5,5,5
+08/08/2026 0:14:17,Alumni,,,,,Adrian Rifaldi,Yang lain:,2025,5,4,3,4,5,4,5,4,5,5,3,5,3,5,5,5,4,5,4,5,5,4,5,5,5,3,5,4,5,5
+08/08/2026 0:20:07,Mahasiswa,Muhamad fadil almubarok khalili,Teknik Informatika,2,L,,,,3,3,4,4,4,3,3,4,4,3,5,4,4,3,4,3,3,3,4,4,3,3,3,4,3,3,3,4,4,3
+08/08/2026 0:20:42,Mahasiswa,Rakan Gustian Muhammad Akbar ,Teknik Informatika,2,L,,,,4,4,4,4,4,4,4,4,4,4,4,4,3,4,4,5,4,4,4,4,3,4,4,4,4,3,4,5,5,4
+08/08/2026 0:25:51,Mahasiswa,Rahmat Wildan Sudrajat,Teknik Informatika,8,L,,,,5,5,5,5,4,2,4,1,2,1,4,4,4,3,4,5,3,2,5,3,1,1,4,3,4,4,1,2,3,1
+08/08/2026 0:34:27,Alumni,,,,,Tiara Ambarwati,Teknik Informatika,2025,4,4,4,5,5,5,5,5,5,4,4,4,5,5,4,5,5,5,5,4,3,3,4,4,4,4,5,4,5,4
+08/08/2026 0:46:42,Mahasiswa,Agil Hardiaman,Teknik Informatika,8,L,,,,3,3,3,3,4,4,3,3,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,3,3
+08/08/2026 0:52:19,Mahasiswa,adilah puspita,Sistem Informasi,8,P,,,,3,3,3,3,3,3,3,3,4,3,4,3,3,4,4,3,3,3,4,4,3,3,3,3,4,3,3,4,4,3
+08/08/2026 1:07:17,Mahasiswa,Siwi Nur Safitri ,Yang lain:,8,P,,,,5,5,5,5,5,5,4,4,5,5,4,4,4,4,4,4,4,4,4,4,4,3,4,3,3,4,4,3,4,4
+08/08/2026 1:22:46,Mahasiswa,ANNISYA ILHAMI KHOIRUNNISYA,Teknik Informatika,8,P,,,,3,3,1,2,3,3,3,3,1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+08/08/2026 1:31:13,Mahasiswa,Vivi Widia ,Teknik Informatika,8,P,,,,4,4,4,4,4,4,4,4,4,4,5,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,3,4
+08/08/2026 1:59:22,Mahasiswa,Septian ferdiansyah,Teknik Informatika,8,L,,,,3,4,4,3,2,3,2,3,3,3,4,4,3,3,4,3,5,4,3,3,3,4,4,4,3,4,3,4,4,3
+08/08/2026 2:14:11,Mahasiswa,Adi Muhamad Taufik ,Teknik Informatika,8,L,,,,5,5,5,5,5,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,5,5,5,5,4,5,5,5,5
+08/08/2026 2:17:00,Mahasiswa,Aulia Mahlika Nissa,Akuntansi,8,P,,,,3,3,3,4,3,4,4,2,4,4,3,4,3,4,4,4,4,4,3,4,3,3,4,4,3,3,4,4,4,4
+08/08/2026 5:05:37,Mahasiswa,Rima Aidah ,Teknik Informatika,6,P,,,,5,5,5,4,5,5,4,5,4,4,4,5,4,5,4,4,4,5,4,4,3,4,4,3,4,4,4,3,4,3
+08/08/2026 5:16:36,Mahasiswa,Putra Aliansyah,Teknik Informatika,6,L,,,,5,5,4,5,4,5,4,5,4,4,5,5,5,5,5,5,5,5,5,5,4,5,5,5,5,4,4,4,4,4
+08/08/2026 5:24:47,Mahasiswa,Nela Nurazizah,Teknik Informatika,6,P,,,,4,4,5,4,5,3,3,4,4,4,5,5,4,3,5,3,3,4,4,4,1,1,2,2,2,1,1,1,2,2
+08/08/2026 5:29:14,Mahasiswa,Sofy Nur Kholifah,Teknik Informatika,8,P,,,,3,4,4,4,3,3,3,4,4,4,5,4,3,4,4,3,3,2,3,3,3,3,4,3,4,4,3,5,4,3
+08/08/2026 5:36:08,Alumni,,,,,RABIATUL ISLAMI,Teknik Informatika,2025,3,4,4,4,4,3,3,4,4,3,5,4,3,4,4,4,4,3,4,3,3,3,3,3,4,3,3,4,3,3
+08/08/2026 5:41:58,Alumni,,,,,Naufal Dafa,Teknik Informatika,2025,5,5,5,5,5,4,5,5,5,1,1,5,5,5,1,5,5,5,5,5,1,1,5,5,5,5,5,5,5,5
+08/08/2026 5:57:50,Alumni,,,,,Firda Nurzanah,Yang lain:,2024,4,3,3,4,3,4,4,4,3,3,4,4,4,4,4,4,3,3,4,4,4,4,3,3,3,4,3,4,4,3
+08/08/2026 6:17:29,Alumni,,,,,akbar nasa,Teknik Informatika,2025,5,5,5,5,5,4,4,5,5,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,5,5,4
+08/08/2026 6:35:43,Mahasiswa,Krisna Mulyadi,Sistem Informasi,6,L,,,,4,4,4,4,5,3,3,2,2,3,4,4,4,2,1,4,3,3,4,4,4,4,5,5,5,5,4,4,4,4
+08/08/2026 6:43:21,Mahasiswa,Purwana Rijki Pirmansah ,Teknik Informatika,6,L,,,,5,4,5,5,5,4,4,5,5,4,5,5,5,5,5,4,5,5,5,5,3,3,5,5,5,4,3,5,5,4
+08/08/2026 6:47:15,Alumni,,,,,Asep Ridwan Supriatna,Teknik Informatika,2025,4,4,4,4,3,4,5,4,5,5,5,5,5,3,4,5,5,3,3,3,5,4,3,3,4,4,4,5,3,5
+08/08/2026 6:49:09,Mahasiswa,Mustika Wulandari ,Pendidikan Bahasa Sastra Indonesia dan Daerah,8,P,,,,4,4,3,3,3,3,3,4,5,1,4,4,3,3,4,3,4,3,3,4,4,3,2,3,3,3,3,5,4,3
+08/08/2026 6:51:41,Alumni,,,,,Nuraini permatasari,Akuntansi,2021,2,2,4,4,4,4,4,4,4,2,5,5,4,4,5,5,5,5,5,5,3,3,3,3,3,3,3,5,3,4
+08/08/2026 6:57:51,Mahasiswa,angga yudha,Teknik Informatika,6,L,,,,4,4,3,4,3,4,4,3,3,3,3,3,4,3,4,4,3,3,4,4,3,3,4,4,4,4,4,4,4,3
+08/08/2026 6:58:52,Mahasiswa,Wahyu saepul Rohman ,Pendidikan IPS,8,L,,,,4,2,2,3,4,1,2,2,3,4,2,2,3,2,1,3,1,2,1,1,2,3,1,2,1,3,1,3,4,2
+08/08/2026 7:01:14,Mahasiswa,Reva Denitta ,Yang lain:,8,P,,,,4,4,5,4,5,3,3,3,4,4,5,5,4,5,4,3,4,4,5,5,4,3,3,3,4,4,5,5,5,5
+08/08/2026 7:05:33,Alumni,,,,,Hasbi,Teknik Informatika,2025,3,4,4,4,3,4,3,4,4,3,4,4,4,3,2,3,4,4,3,3,4,2,2,2,4,4,3,4,4,3
+08/08/2026 7:08:03,Alumni,,,,,Muhamad Aksal Dzilhamsyah ,Teknik Informatika,2022,4,4,5,4,5,5,4,5,5,5,5,5,5,5,4,5,5,5,3,2,1,1,5,2,5,5,2,5,5,5
+08/08/2026 7:13:42,Alumni,,,,,Rendi,Yang lain:,2025,1,2,1,3,2,1,4,4,3,3,2,2,3,1,1,3,2,1,2,2,1,2,1,2,3,2,3,3,3,3
+08/08/2026 7:23:23,Alumni,,,,,Rajfikar Ali Al Sayyid ,Teknik Informatika,2025,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+08/08/2026 7:31:28,Alumni,,,,,Peni Sulistyawati,Yang lain:,2020,5,4,3,4,3,3,3,4,4,3,3,4,4,4,3,4,3,4,4,4,3,3,3,3,3,4,4,4,4,3
+08/08/2026 7:35:48,Mahasiswa,Randi Irwana,Teknik Informatika,6,L,,,,4,4,4,4,4,3,4,3,4,4,4,4,4,4,4,3,4,4,4,4,4,3,5,5,5,3,3,5,3,3
+08/08/2026 7:36:15,Alumni,,,,,adisty pradeviany,Sistem Informasi,2022,4,3,3,4,3,4,4,4,4,3,4,4,3,4,3,4,4,4,4,4,3,3,3,4,4,4,5,5,4,5
+08/08/2026 7:40:50,Mahasiswa,Risma Depa Yulianawati,Teknik Informatika,8,P,,,,5,5,5,5,5,5,3,4,3,4,5,5,5,5,5,5,5,5,5,5,5,3,5,4,4,5,3,3,4,5
+08/08/2026 7:43:39,Mahasiswa,Inka Aqila Nurfalqi,Teknik Informatika,6,P,,,,5,4,5,5,5,4,4,5,5,3,4,4,5,5,5,4,3,4,3,3,3,4,5,4,5,4,4,5,5,3
+08/08/2026 7:44:31,Mahasiswa,Amelia Balqis Hermawan ,Teknik Informatika,8,P,,,,4,4,4,4,4,3,4,4,4,1,4,4,4,4,4,4,3,3,1,3,2,1,4,4,4,1,1,4,4,1
+08/08/2026 7:44:41,Mahasiswa,Purnamasari,Teknik Informatika,6,P,,,,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+08/08/2026 7:44:53,Mahasiswa,mania salwa ramadany,Teknik Informatika,4,P,,,,3,3,3,3,3,3,3,3,3,3,4,4,4,4,3,4,4,3,4,4,3,3,2,2,2,4,4,4,4,3
+08/08/2026 7:47:00,Mahasiswa,Andhika Maulana Shiddiq,Teknik Informatika,8,L,,,,3,4,4,4,4,4,3,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+08/08/2026 7:47:47,Alumni,,,,,Sandi Saepudin ,Teknik Informatika,2024,3,3,4,4,3,2,2,4,3,2,4,4,4,3,4,4,4,4,3,3,2,3,5,5,5,3,3,5,4,3
+08/08/2026 7:50:34,Mahasiswa,Dandi Gustira,Yang lain:,Yang lain:,L,,,,4,4,4,5,4,4,4,5,5,3,4,4,4,5,5,5,5,5,5,5,4,4,5,4,4,4,4,5,4,5
+08/08/2026 7:52:09,Mahasiswa,Idham Muhammad Rafi ,Teknik Informatika,8,L,,,,5,4,5,4,3,2,2,4,4,3,3,4,4,4,5,4,4,4,4,4,5,4,3,3,5,2,3,3,4,3
+08/08/2026 7:58:29,Mahasiswa,Rheine ilmi sa'diah,Ilmu Pemerintahan,8,P,,,,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+08/08/2026 8:11:11,Mahasiswa,Rian Ali Muhamad Agustin,Teknik Informatika,8,L,,,,5,5,5,5,5,4,4,4,5,3,5,4,4,4,5,5,5,4,4,3,3,3,5,3,5,3,4,5,5,3
+08/08/2026 8:17:02,Mahasiswa,Sansan Juliansyah,Pendidikan IPS,8,L,,,,4,4,4,4,4,5,5,4,5,3,4,5,5,4,4,5,5,5,5,4,3,3,3,3,3,5,5,5,5,3
+08/08/2026 8:41:50,Mahasiswa,sarla nur zalika,Teknik Informatika,8,P,,,,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+08/08/2026 8:46:16,Mahasiswa,Faisal Rizky,Teknik Informatika,8,L,,,,5,5,5,5,5,3,3,5,3,5,5,5,5,5,5,5,5,5,5,5,2,2,5,5,5,5,2,2,5,5
+08/08/2026 9:09:18,Alumni,,,,,Yusran Wisnu Nasrullah Syarifudin,Teknik Informatika,2024,5,5,5,5,5,5,5,5,5,5,3,4,4,4,4,4,3,4,5,5,5,5,3,5,5,5,5,5,5,4
+08/08/2026 9:44:24,Mahasiswa,Leni Marlina,Akuntansi,8,P,,,,4,3,4,5,3,5,5,5,5,4,5,5,5,5,5,5,5,5,5,4,3,3,3,4,3,5,5,5,5,5
+08/08/2026 9:44:57,Mahasiswa,Salma Noerazizah,Pendidikan Bahasa Inggris,8,P,,,,4,4,4,4,4,4,3,4,4,1,5,5,5,4,4,3,3,4,5,4,5,4,2,3,3,4,3,4,3,2
+08/08/2026 9:52:14,Mahasiswa,Bunga Fitriani,Teknik Informatika,8,P,,,,4,4,5,3,4,3,3,5,5,4,5,5,5,4,3,4,4,4,5,5,4,3,4,5,4,4,3,5,4,4
+08/08/2026 9:53:37,Mahasiswa,Aqillah Dhiya Ulhaq,Akuntansi,8,P,,,,4,3,3,3,3,3,3,4,4,3,3,3,3,3,3,3,3,3,4,3,3,3,3,3,3,3,3,4,3,3
+08/08/2026 9:55:51,Mahasiswa,Rahmayunda Khaerunisa,Akuntansi,8,P,,,,3,3,4,4,4,3,3,4,4,3,4,4,3,3,4,3,3,3,3,3,3,3,3,3,4,3,4,4,4,3
+08/08/2026 9:57:32,Mahasiswa,Anas susilo,Ilmu Pemerintahan,8,L,,,,4,4,3,4,4,4,4,3,5,4,4,4,4,4,4,4,5,5,4,4,3,3,3,3,3,4,3,4,4,4
+08/08/2026 10:06:14,Mahasiswa,Asep Purnama,Yang lain:,8,L,,,,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,3,3,3,3,3,3,3,3
+08/08/2026 10:21:02,Mahasiswa,SALSABILA SA'BANIYAH FATHONAH,Pendidikan Bahasa Inggris,8,P,,,,3,4,4,5,5,3,3,4,5,4,4,4,5,4,5,4,2,4,5,2,3,4,4,5,5,3,3,5,5,4
+08/08/2026 10:23:02,Mahasiswa,Iis nurpadilah,Keperawatan,8,P,,,,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+08/08/2026 10:40:34,Mahasiswa,Nala ,Pendidikan Bahasa Inggris,8,P,,,,5,5,4,4,4,3,3,5,5,3,4,4,3,3,4,3,3,2,2,3,3,4,3,3,3,3,4,5,4,4
+08/08/2026 10:45:01,Mahasiswa,Intan Telaumbanua,Teknik Informatika,6,P,,,,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+08/08/2026 10:57:49,Mahasiswa,Andi Septian,Teknik Informatika,8,L,,,,5,5,5,5,5,5,5,5,5,5,5,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+08/08/2026 11:21:23,Mahasiswa,Rafly Maulannasir,Teknik Informatika,6,L,,,,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+08/08/2026 11:39:37,Alumni,,,,,ILHAM NUGRAHA,Yang lain:,2025,3,4,4,4,3,5,4,4,5,4,3,4,5,4,4,5,2,3,3,2,4,5,2,3,3,5,5,5,4,4
+08/08/2026 11:49:41,Alumni,,,,,Anggit ,Akuntansi,2020,4,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,2,2,2,2,4,4,4,4,4
+08/08/2026 12:14:11,Mahasiswa,Larasati,Yang lain:,5,P,,,,4,4,4,4,5,4,5,5,4,4,5,3,5,3,4,5,5,5,5,5,3,3,3,4,4,5,5,5,3,3
+08/08/2026 12:55:38,Mahasiswa,Vicky Arpan,Pendidikan Bahasa Sastra Indonesia dan Daerah,8,P,,,,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+08/08/2026 13:21:51,Mahasiswa,NUH ABDUL JABAR,Teknik Informatika,6,L,,,,4,4,4,4,3,3,4,5,5,5,5,4,4,5,5,5,4,5,3,4,5,4,5,4,5,4,4,5,5,5
+08/08/2026 13:27:22,Mahasiswa,Hikmal akbar ramadhan,Teknik Informatika,7,L,,,,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1
+08/08/2026 13:32:12,Mahasiswa,dzikri m syakir,Teknik Informatika,-,L,,,,4,4,4,4,4,3,4,3,5,4,3,2,3,4,3,2,4,3,3,4,3,3,3,3,3,4,5,4,5,5
+08/08/2026 13:41:47,Mahasiswa,Farhan setiwan,Pendidikan Bahasa Sastra Indonesia dan Daerah,8,L,,,,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+08/08/2026 14:07:39,Mahasiswa,M Faiz Fasihat,Teknik Informatika,8,L,,,,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+08/08/2026 14:10:14,Alumni,,,,,Lia Nurhayati,Ilmu Al Qur'an dan Tafsir,2024,5,3,3,4,3,5,5,4,4,4,5,4,4,4,4,4,4,3,5,4,4,3,3,2,2,5,3,4,3,3
+08/08/2026 14:11:19,Mahasiswa,Hafidz muhammad,Teknik Informatika,8,L,,,,4,4,4,4,4,4,4,4,4,4,4,3,4,4,4,4,4,4,4,4,3,3,3,3,4,4,3,3,3,3
+08/08/2026 14:12:56,Mahasiswa,Herra Dwi Adlina,Sistem Informasi,4,P,,,,5,4,5,5,5,5,5,5,5,5,5,4,5,4,5,5,4,4,4,4,5,5,5,5,5,5,4,4,5,5
+08/08/2026 14:37:38,Mahasiswa,Sohabatul Ismi Taupik Rohman,Pendidikan Bahasa Inggris,4,L,,,,4,3,4,4,3,3,4,3,4,2,4,4,3,3,4,5,4,3,5,5,4,4,4,4,3,3,3,4,3,3
+08/08/2026 14:40:01,Alumni,,,,,Rudy Gunawan,Teknik Informatika,2024,4,3,4,5,1,5,5,4,4,3,5,3,5,4,5,5,5,4,4,4,3,2,4,5,5,5,4,5,5,5
+08/08/2026 14:48:10,Mahasiswa,SUKMAWATI,Akuntansi,8,P,,,,4,4,3,3,4,4,5,3,3,4,5,5,4,3,4,5,4,4,5,4,2,2,2,2,2,5,4,3,3,4
+08/08/2026 14:48:53,Mahasiswa,Reyna Noernaial,Teknik Informatika,4,P,,,,3,4,4,4,4,5,3,5,4,3,5,4,3,3,4,5,4,4,4,3,3,3,3,3,4,5,5,4,4,3
+08/08/2026 14:53:34,Alumni,,,,,Ahmad kurniadin,Teknik Informatika,2025,3,3,3,4,4,3,4,3,3,4,3,3,3,4,4,3,4,3,4,4,3,3,3,1,1,1,3,3,3,3
+08/08/2026 14:53:42,Mahasiswa,Aliya Gussela,Akuntansi,8,P,,,,4,4,5,5,4,5,5,5,5,5,5,5,4,5,5,5,5,5,5,5,4,4,4,4,4,5,5,5,5,5
+08/08/2026 14:57:47,Alumni,,,,,Zarkasih Nur Hermawan,Teknik Informatika,2025,3,3,4,4,5,3,3,4,5,2,5,5,4,3,5,3,4,4,5,4,3,3,4,3,5,3,3,5,3,3
+08/08/2026 15:03:44,Mahasiswa,Firly Rizqi Permana ,Ilmu Pemerintahan,8,L,,,,5,5,5,5,4,4,5,3,3,4,5,5,5,4,4,3,5,4,4,4,3,3,3,3,4,4,4,5,5,5
+08/08/2026 15:07:41,Mahasiswa,MUHAMMAD SALMAN AL FARISI,Sistem Informasi,5,L,,,,3,4,5,4,4,3,4,5,5,5,5,4,5,4,5,5,3,3,5,4,2,1,3,3,4,3,3,4,5,5
+08/08/2026 15:08:50,Mahasiswa,Muhamad Fauzi Andrian Yovi,Ilmu Pemerintahan,8,L,,,,5,5,5,5,3,5,5,5,5,3,5,3,4,3,5,5,5,4,4,3,3,3,3,3,4,5,5,5,5,5
+08/08/2026 15:09:11,Mahasiswa,Agung setiawan,Agroteknologi,8,L,,,,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+08/08/2026 15:10:00,Mahasiswa,Putri Susanti ,Pendidikan Bahasa Inggris,8,P,,,,4,4,5,4,4,5,5,4,5,5,4,5,5,5,4,5,5,5,5,4,4,5,5,5,5,4,5,5,5,5
+08/08/2026 15:11:45,Mahasiswa,Atep Solihin ,Teknik Informatika,6,L,,,,4,4,4,5,5,4,4,4,5,4,5,4,5,4,5,5,4,3,5,3,3,2,5,4,4,3,4,5,4,4
+08/08/2026 15:12:05,Alumni,,,,,RUDI AHMAD GODZALI ,Sistem Informasi,2025,4,5,4,3,3,3,4,5,5,4,5,4,4,4,5,4,3,3,4,4,4,3,5,3,4,4,3,4,5,4
+08/08/2026 15:24:13,Mahasiswa,Imam Rizki Saputra ,Teknik Informatika,6,L,,,,5,5,5,5,5,5,5,5,5,1,5,5,5,5,5,5,5,5,5,5,3,4,4,4,4,4,4,4,4,4
+08/08/2026 15:26:39,Alumni,,,,,Sri Wahyuni ,Akuntansi,2025,4,4,4,5,4,4,4,3,5,4,5,4,4,4,5,3,4,3,4,5,3,3,2,4,4,4,4,5,5,5
+08/08/2026 15:48:00,Mahasiswa,irfan fauzi,Teknik Informatika,5,L,,,,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+08/08/2026 15:52:25,Mahasiswa,Handi Supendi,Agroteknologi,8,L,,,,5,5,3,5,4,3,4,3,5,4,5,5,5,5,4,4,4,3,5,4,3,4,3,4,3,3,3,4,4,4
+08/08/2026 15:57:01,Mahasiswa,mei saputri riani,Sistem Informasi,4,P,,,,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,3,4,4,4,4,4
+08/08/2026 15:59:58,Mahasiswa,Pipit,Teknik Informatika,2,P,,,,4,5,4,5,5,5,5,4,4,5,5,4,4,5,5,5,4,4,4,5,3,3,4,5,4,4,4,5,4,5
+08/08/2026 16:01:09,Mahasiswa,Muhammad Fakhri N,Teknik Informatika,8,L,,,,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3
+08/08/2026 16:05:40,Mahasiswa,Ichsan Nur Fadilah,Sistem Informasi,6,L,,,,1,1,1,1,2,1,1,1,1,1,3,3,1,2,1,1,1,1,1,1,1,3,1,4,1,1,3,1,1,1
+08/08/2026 16:07:57,Mahasiswa,Ai Sri Herawati ,Pendidikan IPS,6,P,,,,5,4,4,4,5,5,5,5,5,4,5,5,4,5,4,4,4,4,4,4,5,4,4,4,4,5,4,5,5,4
+08/08/2026 16:09:02,Mahasiswa,Roy Bakti Surya Medal,Teknik Informatika,6,L,,,,5,5,5,5,5,4,5,5,5,5,5,5,5,5,5,5,4,5,5,5,4,4,5,5,5,4,5,5,5,3
+08/08/2026 16:13:01,Alumni,,,,,Aulia Hanifa Ardita,Teknik Informatika,2024,3,3,4,3,3,3,3,4,4,3,4,4,4,3,4,4,4,3,4,3,3,3,2,4,4,3,4,4,4,3
+08/08/2026 16:18:46,Mahasiswa,Nayla Nurul Pratiwi ,Ilmu Pemerintahan,5,P,,,,3,3,3,4,4,3,4,4,3,3,5,4,4,5,5,5,4,4,4,4,2,3,2,3,2,3,4,3,3,3
+08/08/2026 16:23:42,Mahasiswa,Imam Fauzan Riyanto,Ilmu Pemerintahan,4,L,,,,4,4,4,5,4,4,5,5,5,3,5,4,4,5,4,4,3,3,4,4,3,3,4,4,4,3,3,4,4,4
+08/08/2026 16:25:33,Alumni,,,,,Rangga Kurniawan,Teknik Informatika,2024,4,4,5,5,5,4,5,5,5,3,5,5,5,5,5,5,5,5,4,5,3,3,4,4,4,3,4,4,4,4
+08/08/2026 16:32:01,Mahasiswa,Hilman Wangsa,Ilmu Pemerintahan,8,L,,,,5,5,5,5,5,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+08/08/2026 16:53:36,Alumni,,,,,Ali Sholeh ,Ilmu Pemerintahan,2024,4,5,4,4,5,4,5,4,5,5,4,5,5,4,4,4,5,4,4,4,2,4,1,2,2,5,5,5,5,3
+08/08/2026 17:00:24,Alumni,,,,,Fazriani Maulani,Sistem Informasi,2024,3,3,3,4,3,3,3,3,4,4,4,4,4,4,4,5,4,4,5,4,2,2,3,3,3,3,3,4,3,3
+08/08/2026 17:02:04,Mahasiswa,Sandi,Akuntansi,8,L,,,,4,5,5,4,4,3,4,4,3,3,5,5,4,4,4,3,3,4,4,4,3,3,4,4,4,3,4,3,4,4
+08/08/2026 17:31:06,Mahasiswa,Mitri Fatimah ,Pendidikan Bahasa Inggris,8,P,,,,5,5,5,5,4,5,5,5,5,4,5,5,4,4,5,4,4,3,5,4,5,5,4,4,4,5,4,5,4,4
+08/08/2026 17:39:36,Alumni,,,,,ND,Teknik Informatika,2023,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,3,1,1,1,3,2,2,3
+08/08/2026 17:45:24,Mahasiswa,Qurotul Nur Aini,Pendidikan Bahasa Inggris,5,P,,,,4,4,3,4,4,5,5,4,3,5,5,5,5,4,4,5,5,5,5,5,4,4,3,4,3,5,5,3,4,5
+08/08/2026 17:48:11,Mahasiswa,NISRINA NUR'AINI,Pendidikan IPS,8,P,,,,4,3,4,5,5,3,4,3,5,2,5,4,4,3,4,4,3,3,4,3,3,3,3,4,4,2,4,5,4,4
+08/08/2026 17:52:20,Mahasiswa,Muhammad Rivaldi Saefurrohman,Sistem Informasi,12,L,,,,5,5,5,4,4,4,5,4,5,4,3,5,5,5,4,5,5,5,4,5,5,4,5,4,5,4,5,4,5,4
+08/08/2026 17:54:07,Mahasiswa,Fani oktavia,Ilmu komunikasi,2,P,,,,5,4,4,5,4,5,5,5,4,3,5,5,5,4,4,4,4,4,4,3,4,2,2,3,3,4,3,4,4,3
+08/08/2026 18:11:41,Mahasiswa,balqis,Pendidikan IPS,8,P,,,,5,5,4,4,1,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,1,1,1,5,5,5,5,5
+08/08/2026 18:18:45,Alumni,,,,,Ridwan Septiansyah,Teknik Informatika,2025,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,3,5,4,5,4,3,5,4,5
+08/08/2026 18:20:23,Mahasiswa,Thifal Hasna Aulia Habibah,Teknik Informatika,8,P,,,,4,4,4,4,4,4,4,4,3,3,5,4,4,4,4,4,4,4,4,4,3,3,4,4,4,4,3,4,4,3
+08/08/2026 18:31:19,Mahasiswa,Irgi Rangga Saputra,Teknik Informatika,7,L,,,,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4
+08/08/2026 18:37:52,Mahasiswa,Fahmi Muhaimin ,Sistem Informasi,5,L,,,,5,5,5,5,5,3,3,4,4,3,5,5,5,5,5,5,5,4,4,5,5,5,4,4,5,4,4,4,4,4
+08/08/2026 19:17:11,Mahasiswa,Salamah Aulia Latifah,Ilmu Pemerintahan,5,P,,,,3,4,4,4,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,3,5,4,4,4,4,4,5,5,5
+08/08/2026 19:20:49,Mahasiswa,Ziyyan ,Pendidikan ,5,L,,,,4,4,3,4,4,4,4,3,3,3,4,4,4,4,4,2,3,3,3,4,4,3,4,3,4,4,4,4,3,3
+08/08/2026 20:12:41,Mahasiswa,Risda Nurajizah,Teknik Informatika,6,P,,,,2,2,3,3,2,2,2,2,2,1,3,3,3,2,3,2,2,2,2,2,1,1,3,3,2,2,2,3,2,2
+08/08/2026 20:31:40,Mahasiswa,Reysa,Teknik Informatika,7,P,,,,5,5,5,5,5,4,5,5,4,5,5,3,5,3,5,5,5,5,3,5,3,3,5,5,5,5,2,5,5,5
+08/08/2026 20:34:36,Mahasiswa,Merzzaluna Agustin,Sistem Informasi,6,P,,,,4,4,5,5,5,4,4,4,5,4,5,5,4,3,4,5,5,4,3,4,3,3,4,5,5,4,4,4,4,3
+08/08/2026 21:00:43,Alumni,,,,,Dea Putri Ayudia ,Akuntansi,2025,5,5,4,4,5,5,5,5,4,4,5,5,5,4,5,5,5,5,4,5,3,4,3,3,3,5,5,5,5,4
+08/08/2026 21:38:57,Alumni,,,,,Ratuh Tresnati,Teknik Informatika,2025,4,4,4,4,3,3,4,4,3,3,4,5,4,4,4,4,3,4,4,4,2,3,4,3,4,4,4,3,3,3
+08/08/2026 22:16:57,Mahasiswa,Jafar Siddik Aulia Rahman,Teknik Informatika,8,L,,,,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2
+08/08/2026 23:41:53,Alumni,,,,,Wisnu roufff,Teknik Informatika,2025,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+09/08/2026 0:31:26,Mahasiswa,Zacky Artha Raysha ,Teknik Informatika,6,L,,,,5,4,5,5,5,4,3,5,5,4,5,5,4,5,5,5,5,5,5,4,3,3,4,3,5,4,4,5,5,4
+09/08/2026 1:04:16,Mahasiswa,Dechellya Assyya,Teknik Informatika,8,P,,,,4,4,4,4,4,2,3,4,4,4,4,4,4,4,4,4,4,4,4,5,3,3,4,4,4,4,4,4,4,4
+09/08/2026 1:29:55,Mahasiswa,Farizany Noor,Sistem Informasi,8,L,,,,4,3,4,4,5,4,4,5,5,5,4,4,3,4,3,5,5,4,2,4,2,2,4,4,4,5,2,5,5,5
+09/08/2026 2:45:38,Alumni,,,,,Dwi,Teknik Informatika,2025,4,4,5,5,5,3,3,4,5,4,5,5,5,5,5,5,5,5,5,5,3,3,5,5,5,3,3,5,5,5
+09/08/2026 3:48:19,Alumni,,,,,SUPIRDAN,Sistem Informasi,2023,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,5,5,5,5,5,5,5,5
+09/08/2026 6:52:34,Mahasiswa,Siti Rukayah ,Pendidikan Bahasa Inggris,8,P,,,,4,4,3,4,4,4,4,4,3,4,5,5,5,4,4,5,3,4,4,3,3,4,2,4,2,4,2,3,4,4
+09/08/2026 7:27:55,Alumni,,,,,"Khoirun Nissa Al Kubro, S.Pd.",Pendidikan Geografi,2025,5,5,5,5,5,5,3,4,3,3,5,5,5,5,5,5,4,4,4,4,4,4,3,4,4,4,4,4,3,2
+09/08/2026 10:38:28,Mahasiswa,Najwa Tsani Komarudin,Pendidikan Bahasa Inggris,8,P,,,,3,4,3,4,4,4,4,4,5,3,3,2,4,5,3,5,1,3,4,4,3,3,1,1,1,4,4,5,4,3
+09/08/2026 14:55:23,Mahasiswa,Muhammad Fakhriza Anshori ,Ilmu Pemerintahan,6,L,,,,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,3,2,2,2,2,2,2
+09/08/2026 21:31:12,Alumni,,,,,Devia Fitri Nopiani,Sistem Informasi,2025,4,4,4,4,4,5,4,3,3,3,4,4,4,4,4,4,4,4,4,4,4,3,3,3,4,4,4,3,3,2
+09/08/2026 22:15:50,Mahasiswa,Aurelia Septiani,Teknik Informatika,8,P,,,,1,1,2,2,2,1,1,1,1,1,3,3,3,1,3,1,2,1,2,1,1,1,3,3,3,1,1,1,1,1
+10/08/2026 8:27:55,Alumni,,,,,Sofia H,Akuntansi,2019,5,5,5,5,4,5,4,4,4,5,3,4,5,4,5,4,4,5,5,5,3,4,3,3,4,5,5,4,5,5
+10/08/2026 19:06:37,Alumni,,,,,"Dhea Hilma, S.Pd",Pendidikan Bahasa Inggris,2024,4,4,4,4,5,4,4,4,4,3,4,4,4,4,4,4,4,3,4,4,4,3,3,4,3,4,4,4,4,4
+11/08/2026 23:25:56,Mahasiswa,Dega Megananda Putra,Teknik Informatika,8,L,,,,4,3,4,4,5,4,3,4,4,2,5,4,4,4,4,4,4,5,4,4,2,2,4,4,4,4,2,4,2,5
+12/08/2026 7:08:06,Alumni,,,,,Tiara awalul lestari ,Sistem Informasi,2024,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+12/08/2026 9:53:36,Alumni,,,,,Fikri Hanif,Pendidikan Bahasa Perancis,2024,3,4,4,3,3,5,5,4,3,3,5,5,4,3,3,4,4,3,4,3,3,3,3,3,3,4,4,4,4,4

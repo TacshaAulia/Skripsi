@@ -1,0 +1,215 @@
+Berikut roadmap pembuatan aplikasi
+
+FASE 1: Persiapan
+target menyiapkan seluruh fondasi aplikasi sebelum mulai coding
+STEP 1: finalisasi model google colab
+1. checklist seluruh pipeline KDD
+2. checklist model xgboost
+3. checklist shap
+4. checklist recommendation engine
+5. checklist export
+6. checklist file yang akan digunakan PHP
+
+STEP 2: export model machine learning
+1. export model xgboost (.pkl)
+2. export label encoder
+3. export feature name
+4. export knowledge base
+5. export recommendation engine
+6. export konfigurasi model
+7. variasi seluruh file export
+
+Proses utama pada aplikasi
+(1. admin login
+2. kelola data responden
+3. responden mengisi kuesioner
+4. jawaban disimpan
+5. machine learning
+6. recommendation engine
+7. hasil disimpan
+8. riwayat dapat dilihat)
+tapi yang aku bayangkan itu seperti ini (untuk tema/desain aplikasi (gunakan yang sekarang)
+1. aplikasi terdiri dari landing page (sudah sesuai dengan sekarang terutama (bagian body atas pertama yang slide) dimana disitu terdiri dari (
+section body atas pertama yang menampilkan sekilas (profil unibba, fakultas dan prodi yang ada di unibba),
+lalu untuk yang body atas kedua section itu card untuk mengisi kuesioner (jadi pengunjung, mahasiswa baru, mahasiswa aktif dan alumni bisa mengisi tanpa harus login, tapi tetap mengisi biodata singkat(disini responden setelah isi biodata itu bisa lihat hasilnya dan bisa di download via pdf yang berbentuk card interaktif profesional),
+kemudian untuk section body bawah pertama itu (card-card yang nanti nya ada nama2 prodi dan fakultasnya),
+serta untuk section body bawah kedua atau akhir itu (untuk informasi terkait definisi domain cpl, profil kompetensi, dll)
+)
+2. setelah landing page, lalu ada (halaman login admin yang tersembunyi)
+3. lalu untuk setelah login berikut logika saya (
+3.1. menu dashboard (didalamnya ada card total pengguna terdaftar, card jumlah responden (calon mahasiswa baru, mahasiswa aktif, alumni, dan pengunjung umum), card total prediksi ml, tabel aktivitas pengisian kuesioner (dengan fitur pencarian, no, (biodata), profil, crud (kecuali edit) + download, ceklis/filter), tampilan lihat (isi dari kuesioner),
+3.2. sidebar (didalamnya ada tombol untuk ke menu (dashboard, kelola knowledge base, kelola domain cpl, kelola profil kompetensi, profil saya (edit informasi dan password), laporan)),
+3.3. menu kelola knowledge base (berisi tabel knowledge base (dengan fitur pencarian, no, (biodata), profil, crud (kecuali edit) + download, ceklis/filter), tampilan lihat (isi dari kuesioner))),
+3.3. menu kelola domain cpl (berisi tabel domain cpl (dengan fitur pencarian, no, (biodata), profil, crud (kecuali edit) + download, ceklis/filter), tampilan lihat (isi dari kuesioner))),
+3.4. menu kelola profil kompetensi (berisi tabel profil kompetensi (dengan fitur pencarian, no, (biodata), profil, crud (kecuali edit) + download, ceklis/filter), tampilan lihat (isi dari kuesioner))),
+3.5. menu laporan (berisi tabel laporan keseluruhan (dengan fitur pencarian, no, (biodata), profil, crud (kecuali edit) + download, ceklis/filter), tampilan lihat (isi dari kuesioner)))
+)
+
+STEP 3: perancangan database MySQL (mulai dari nol)
+3.1 analisis kebutuhan data
+dari proses utama aplikasi sistem membutuhkan penyimpanan data berikut?
+1. user admin
+2. data responden
+3. jawaban 30 item
+4. hasil prediksi profil
+5. hasil rekomendasi
+6. top 3 program studi
+7. shap explanation
+8. riwayat prediksi
+knowledge base (.json) dan model xgboost tidak perlu disimpan.
+3.2 menentukan entitas
+entitas adalah objek utama yang datanya akan disimpan dalam database. berdasarkan kebutuhan sistem entitas yang diperlukan adalah user (admin aplikasi), responden (data mahasiswa, camaba, alumni, pengunjung umum), jawaban (jawaban 30 item kuesioner), prediksi (hasil klasifikasi profil kompetensi), rekomendasi (hasil recommendation engine). total hanya 5 entitas utama, apakah iya? (sesuaikan)
+3.3 menentukan atribut
+1. tabel user
+2. tabel responden
+3. tabel jawaban
+4. tabel prediksi
+5. tabel rekomendasi
+3.4 menentukan primary key
+3.5 menentukan foreign key
+3.6 relationship
+3.7 ERD
+3.8 LRS (logical record structure)
+3.9 normalisasi
+3.10 struktur tabel final
+
+STEP 4: menyiapkan struktur folder project php
+kompetensi-mahasiswa/
+│
+├── app/
+├── assets/
+│   ├── css/
+│   ├── js/
+│   ├── img/
+│   ├── icons/
+│   ├── fonts/
+│   └── vendor/
+├── config/
+├── controller/
+├── model/
+├── view/
+│   ├── layout/
+│   ├── dashboard/
+│   ├── login/
+│   ├── responden/
+│   ├── kuesioner/
+│   ├── prediksi/
+│   ├── recommendation/
+│   ├── laporan/
+│   └── user/
+├── helper/
+├── database/
+├── python/
+├── recommendation/
+├── uploads/
+├── logs/
+├── vendor/
+├── index.php
+├── login.php
+├── logout.php
+└── README.md
+
+STEP 5: persiapan lingkungan pengembangan
+1. install xampp
+2. install vscode
+3. install python
+4. install composer
+5. install git
+6. install library python
+7. konfigurasi path
+8. konfigurasi apache
+9. konfigurasi mysql
+10. membuat project php
+
+FASE 2: Backend
+mulai membuat aplikasi
+urutannya (...)
+1. routing
+2. koneksi database
+3. login
+4. session
+5. middleware
+6. crud user
+7. crud responden
+8. crud jawaban
+9. crud hasil prediksi
+10. crud rekomendasi
+11. upload file
+12. export pdf
+13. export excel
+14. log aktivitas
+15. logout
+
+FASE 3: Integrasi Machine Learning
+1. python api
+2. load model
+3. load label encoder
+4. load feature
+5. prediksi
+6. SHAP
+7. recommendation engine
+8. explanation generator
+9. pengembangan kompetensi
+10. response json
+11. php membaca json
+12. simpan hasil
+
+FASE 4: Frontend
+1. login
+2. dashboard
+3. profil
+4. data responden
+5. form kuesioner
+6. hasil prediksi
+7. hasil recommendation
+8. explanation
+9. riwayat
+10. pengaturan?
+11. user
+12. logout
+
+FASE 5: Testing
+1. blackbox testing
+2. whitebox testing
+3. AUT
+4. integrasi model
+5. integrasi recommendation
+6. validasi kdd
+7. validasi waterfall
+8. deployment
+
+
+okey sekarang bantu saya menyelaraskan untuk step by step ke implementasi aplikasi, tapi saya ingin kamu memberikan tahapannya secara lengkap disini, serta jelaskan untuk orang awam, kita mulai dari FASE 1, STEP 1 ya "Berikut roadmap pembuatan aplikasi FASE 1: Persiapan target menyiapkan seluruh fondasi aplikasi sebelum mulai coding STEP 1: finalisasi model google colab 1. checklist seluruh pipeline KDD 2. checklist model xgboost 3. checklist shap 4. checklist recommendation engine 5. checklist export 6. checklist file yang akan digunakan PHP" jika terlalu banyak kerjakan step by step, tapi ingat harus lengkap
+
+
+okey sekarang bantu saya menyelaraskan untuk step by step ke implementasi aplikasi, tapi saya ingin kamu memberikan tahapannya secara lengkap disini (dan sesuaikan dengan aplikasi real ini), serta jelaskan untuk orang awam, kita mulai dari Proses utama pada aplikasi
+(1. admin login
+2. kelola data responden
+3. responden mengisi kuesioner
+4. jawaban disimpan
+5. machine learning
+6. recommendation engine
+7. hasil disimpan
+8. riwayat dapat dilihat)
+tapi yang aku bayangkan itu seperti ini (untuk (Nuansa visual: formal tetapi ramah, dengan warna dominan gelap/abu-abu, aksen emas, hijau, dan biru untuk menonjolkan status, hasil, dan tindakan.
+Layout: menggunakan desain dashboard yang terstruktur, dengan kartu informasi, banner hero, badge status, progress bar, dan elemen interaktif yang memudahkan pemahaman.
+Gaya UI: cenderung clean, terorganisir, dan berorientasi data, sehingga terlihat seperti sistem informasi akademik yang serius namun tetap nyaman dipakai.
+Fokus pengalaman pengguna: memudahkan pengguna melihat hasil evaluasi, rekomendasi, dan arah pengembangan kompetensi secara cepat.
+Jadi, secara keseluruhan, aplikasinya terasa seperti “smart academic portal” yang menggabungkan unsur sistem informasi, dashboard personal, dan analitik berbasis machine learning.)
+1. aplikasi terdiri dari landing page dimana disitu terdiri dari (
+section body atas pertama yang menampilkan sekilas (profil unibba, fakultas dan prodi yang ada di unibba),
+lalu untuk yang body atas kedua section itu card untuk mengisi kuesioner (jadi pengunjung, mahasiswa baru, mahasiswa aktif dan alumni bisa mengisi tanpa harus login, tapi tetap mengisi biodata singkat(disini responden setelah isi biodata itu bisa lihat hasilnya dan bisa di download via pdf yang berbentuk card interaktif profesional),
+kemudian untuk section body bawah pertama itu (card-card yang nanti nya ada nama2 prodi dan fakultasnya),
+serta untuk section body bawah kedua atau akhir itu (untuk informasi terkait definisi domain cpl, profil kompetensi, dll)
+)
+2. setelah landing page, lalu ada (halaman login admin yang tersembunyi)
+3. lalu untuk setelah login berikut logika saya (
+3.1. menu dashboard (didalamnya ada card total pengguna terdaftar, card jumlah responden (calon mahasiswa baru, mahasiswa aktif, alumni, dan pengunjung umum), card total prediksi ml, tabel aktivitas pengisian kuesioner (dengan fitur pencarian, no, (biodata), profil, crud (kecuali edit) + download, ceklis/filter), tampilan lihat (isi dari kuesioner),
+3.2. sidebar (didalamnya ada tombol untuk ke menu (dashboard, kelola knowledge base, kelola domain cpl, kelola profil kompetensi, profil saya (edit informasi dan password), laporan)),
+3.3. menu kelola knowledge base (berisi tabel knowledge base (dengan fitur pencarian, no, (biodata), profil, crud (kecuali edit) + download, ceklis/filter), tampilan lihat (isi dari kuesioner))),
+3.3. menu kelola domain cpl (berisi tabel domain cpl (dengan fitur pencarian, no, (biodata), profil, crud (kecuali edit) + download, ceklis/filter), tampilan lihat (isi dari kuesioner))),
+3.4. menu kelola profil kompetensi (berisi tabel profil kompetensi (dengan fitur pencarian, no, (biodata), profil, crud (kecuali edit) + download, ceklis/filter), tampilan lihat (isi dari kuesioner))),
+3.5. menu laporan (berisi tabel laporan keseluruhan (dengan fitur pencarian, no, (biodata), profil, crud (kecuali edit) + download, ceklis/filter), tampilan lihat (isi dari kuesioner)))
+)
+
+" jika terlalu banyak kerjakan step by step, tapi ingat harus lengkap

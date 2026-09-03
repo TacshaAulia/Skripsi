@@ -1,0 +1,254 @@
+Berikut urutan model di google colab
+BAGIAN 0 Cover
+Model Machine Learning untuk Klasifikasi Profil Kompetensi dan Rekomendasi Pengembangan Mahasiswa Berbasis Kurikulum
+
+Google Colab
+Universitas Bale Bandung
+
+Metode Pengembangan Model : KDD
+Algoritma: Decision Tree dan XGBoost
+Explainable AI: SHAP
+Recommendation Engine V2
+
+BAGIAN 1 Persiapan Lingkungan (preparation)
+1. import library
+2. import dataset
+3. import knowledge base?
+4. definisi 30 item
+5. definisi profil kompetensi
+6. definisi cpl
+7. definisi program studi
+8. definisi fakultas
+9. mapping item kuesioner --> profil kompetensi
+10. mapping profil kompetensi --> domain CPL
+11. mapping item kuesioner --> domain CPL (dihasilkan otomatis dari nomor 9+10)
+12. mapping domain CPL --> program studi
+13. mapping program studi --> fakultas
+14. mapping program studi --> kompetensi pengembangan
+15. mapping kompetensi master
+16. mapping kompetensi --> sertifikasi
+17. mapping kompetensi --> karier
+18. validasi seluruh knowledge base
+
+BAGIAN 2 KDD STEP 1: SELECTION
+(memilih dataset, validasi dataset, memilih artibut)
+1. import dataset
+2. lihat dataset
+3. jumlah data
+4. jumlah kolom
+5. daftar feature
+6. target
+lalu
+1. tes missing
+2. tes duplicate
+3. tes skala likert
+4. tes tipe data
+5. tes kelengkapan
+lalu dataset siap
+(kalau berhasilL dataset valid, 300 responden, 30 featur, 0 missing, 0 duplicate)
+
+BAGIAN 3 KDD STEP 2: PREPROCESSING
+(rule based initial labeling berada)
+alur
+1. knowledge base 
+2. hitung skor profil
+3. normalisasi
+4. tie breaking 
+5. initial label
+6. dataset final
+cell
+1. knowledge base item
+2. knowledge base profil
+3. knowledge base cpl
+4. knowledge base prodi
+5. knowledge base fakultas
+baru 
+6. hitung profil
+7. normalisasi profil
+8. hitung cpl
+9. normalisasi cpl
+10. tie breaking
+11. initial label
+12. tambah label
+13. distribusi label
+14. quality check
+lalu
+15. visualisasi distribusi
+lalu
+16. dataset final
+
+BAGIAN 4 KDD STEP 3: TRANSFORMATION
+(pisahkan x, pisahkan y, encoding, train test split, validasi, simpan dataset)
+1. feature selection
+2. encoding
+3. train test split
+4. validasi distribusi
+5. dataset ready
+
+BAGIAN 5 KDD STEP 4: DATA MINING (Machine Learning)
+urutan
+1. decision tree
+2. xgboost
+3. hyperparameter
+4. training
+5. prediction
+decision tree digunakan sebagai baseline model, setelah baseline dievaluasi XGBoost digunakan sebagai boosted decision tree untuk memperoleh performa yang lebih baik dan menghasilkan generalisasi yang lebih tinggi.
+cell
+1. baseline model (decision tree)
+import library, membangun model decision tree, training model, prediksi data testing, evaluasi model (accuracy, precision, recall, f1-score), classification report, confusion matrix, ROC-AUC multiclass, analisis overfitting (pada analisis overfitting (hitung training accuracy, testing accuracy, selisih accuracy, kesimpulan) kalau gap kecil (contoh: 2% = model stabil) kalau gap besar = overfitting. jadi, analisis overfitting dilakukan berdasarkan hasil, bukan asumsi awal)
+2. baru lanjut ke XGBoost
+import library, membangun model awal, training awal, evaluasi awal, hyperparameter tuning, gridsearchcv, cross validation, training model terbaik, prediksi, evaluasi, classification report, confusion matrix, ROC-AUC, analisis generalisasi model
+3. baru perbandingan model
+perbandingan accuracy, perbandingan precision, perbandingan recall, perbandingan f1, perbandingan ROC, visualisasi, kesimpulan
+dan tambahkan cell setelah decision tree "apakah perlu menggunakan boosting? (walau tetap untuk model itu dibuat keduanya)"
+
+BAGIAN 6 KDD STEP 5: INTERPRETATION / EVALUATION
+(ini bagian SHAP)
+1. import SHAP
+2. explainer
+3. summary plot
+4. bar plot
+5. force plot
+6. interpretasi
+ini haruskah?
+7. top 10 feature
+8. top 20 feature
+9. featur importance
+
+BAGIAN 7: RECOMMENDATION SCORING ENGINE V2
+(setiap level harus memiliki proses audit)
+alur
+1. knowledge base
+2. item
+3. profil
+4. cpl
+5. program studi
+6. fakultas
+7. recommendation 
+8. explanation
+9. pengembangan
+10. output PHP
+dibuatkan diagram
+1. 30 item
+2. 6 profil kompetensi
+3. 8 domain cpl
+4. 12 program studi
+5. 7 fakultas
+6. rekomendasi
+7. penjelasan
+8. pengembangan kompetensi
+
+cell
+
+1. knowledge base (kb)
+a. kb item kuesioner --> profil kompetensi
+b. kb profil kompetensi --> domain cpl
+c. kb domain cpl --> program studi
+d. kb program studi --> fakultas
+e. kb pengembagan kompetensi
+
+2. recommendation scoring
+alur
+a. 30 item kuesioner
+b. hitung item kuesioner skor
+c. hitung profil kompetensi
+d. normalisasi profil kompetensi
+e. hitung domain cpl
+f. normalisasi domain cpl
+g. hitung program studi
+h. normalisasi program studi
+cell
+a. input responden
+b. hitung skor item kuesioner
+c. audit kontribusi item kuesioner
+d. hitung profil kompetensi
+e. normalisasi profil kompetensi
+f. audit kontribusi profil kompetensi
+g. hitung domain cpl
+h. normalisasi domain cpl
+i. audit kontribusi domain cpl
+j. hitung program studi
+k. normalisasi program studi
+l. audit kontribusi program studi
+
+3. recommendation ranking
+a. softmax
+b. tie breaking
+c. top 3 recommendation
+d. audit ranking
+
+4. explanation generator
+a. item kuesioner dominan
+b. profl kompetensi dominan
+c. domain cpl dominan
+d. alasan rekomendasi
+e. komponen pengembangan
+
+5. recommendation engine
+a. recommendation engine()
+b. contoh responden
+c. output final
+d. output json
+
+BAGIAN LANJUTAN: DEMONSTRASI PIPELINE KDD
+BAB A (pembangunan model)
+selection, preprocessing, transformation, data mining, evaluation, knowledge base, recommendation engine
+BAB B (demonstrasi kdd)
+cell
+1. input responden
+2. selection
+3. preprocessing (rule based initial labeling)
+4. transformation
+5. data mining
+6. evaluation (SHAP)
+7. interpretation (recommendation engine)
+8. knowledge recommendation
+9. ringkasan pipeline kdd
+
+BAGIAN LANJUTAN FINAL: TRACEABILITY ENGINE
+1. menampilkan input responden
+2. item kuesioner dominan
+3. profil kompetensi
+4. domain cpl
+5. program studi
+6. pengembangan kompetensi
+7. visualisasi pipeline
+8. laporan traceability
+
+BAGIAN AKHIR: DECISION AUDIT ENGINE
+(memperlihatkan asal-usul seluruh nilai rekomendasi)
+1. audit item kuesioner --> profil kompetensi
+2. audit profil kompetensi --> domain cpl
+3. audit domain cpl --> program studi
+4. top 3 program studi
+5. decision tree (audit trial)
+6. decision audit report
+
+BAGIAN 8: DEPLOYMENT
+1. export model
+2. export label encoder
+3. export json
+4. export knowledge base
+5. export recommendation
+6. uji label
+7. simulasi php
+8. selesai
+
+informasi tambahan:
+ATURAN TIE BREAKING
+1. tie breaking untuk rule based initial labeling
+level 1: skor profil kompetensi terbesar
+level 2: terjadi tie
+level 3: bandingkan dengan skor tujuan karier
+level 4: jika skor tujuan karier masih sama, lanjut bandingkan dengan skor minat
+level 5: jika skor minat masih sama, lanjut bandingkan dengan skor gaya belajar
+level 6: jika skor gaya belajar masih sama, lanjut hitung jumlah indikator dominan
+level 7: jika skor indikator dominan masih sama, beri status EXACT_TIE dengan label (profil yang sama)
+2. tie breaking untuk recommendation engine
+level 1: recommendation score terbesar
+level 2: jika skor sama, lanjut bandingkan skor bobot cpl dominan
+level 3: jika skor bobot cpl dominan masih sama, bandingkan dengan jumlah domain cpl yang berkontribusi
+level 4: jika masih sama, bandingkan dengan jumlah profil kompetensi yang berkontribusi
+level 5: jika masih sama, bandingkan dengan jumlah item kuesioner dominan
+level 6: jika masih sama, bandingkan dengan confidence score (softmax)
+level 7: jika masih sama, beri status EXACT_TIE dengan label (prodi yang sama)

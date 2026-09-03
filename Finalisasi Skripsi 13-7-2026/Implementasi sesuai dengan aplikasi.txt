@@ -1,0 +1,306 @@
+Roadmap Implementasi Aplikasi (SDLC Waterfall)
+Judul Penelitian: Model Machine Learning untuk Klasifikasi Profil Kompetensi dan Rekomendasi Pengembangan Mahasiswa Berbasis Kurikulum
+Teknologi: PHP Native + MySQL + Python (XGBoost, SHAP, Recommendation Scoring Engine V2)
+Metode: SDLC Waterfall (Persiapan & Analisis → Perancangan → Pembangunan Backend → Integrasi ML → Pembangunan Frontend → Pengujian & Deployment)
+
+User Review Required
+IMPORTANT
+
+Pendekatan Arsitektur Integrasi PHP Native ↔ Python: Aplikasi menggunakan PHP Native untuk backend/frontend operasional dan web server, serta Python Script Execution / Micro-API (Flask/FastAPI) untuk mengeksekusi model Machine Learning (.pkl) dan SHAP. Pada roadmap ini, opsi yang disarankan adalah Python Subprocess Bridge (CLI) atau Python Microservice (FastAPI/Flask) agar PHP Native dapat memperoleh response JSON secara real-time dari model ML & Recommendation Engine tanpa membebani web server PHP.
+
+NOTE
+
+Roadmap ini dirancang secara berurutan (sequential) mengikuti kaidah SDLC Waterfall, di mana setiap fase bergantung pada luaran (deliverables) fase sebelumnya.
+
+FASE 1 — Persiapan, Analisis & Perancangan (Analysis & Design)
+Pada fase ini dilakukan penguncian seluruh artefak Machine Learning dari Google Colab, perancangan skema database MySQL, arsitektur sistem, serta penataan struktur folder project.
+
+1.1 Finalisasi Artefak Google Colab & Export File
+Tujuan: Mengekspor seluruh artefak model Machine Learning dan Knowledge Base dari Google Colab ke format file yang siap dibaca oleh aplikasi web.
+Langkah-langkah:
+Export model XGBoost terlatik dan Label Encoder ke file .pkl (xgb_model.pkl, label_encoder.pkl, scaler.pkl jika ada).
+Export 8 file Knowledge Base JSON pendukung Recommendation Engine V2:
+item_to_profil.json (Mapping 30 item kuesioner ke Profil Kompetensi)
+profil_to_cpl.json (Mapping Profil Kompetensi ke Domain CPL)
+cpl_to_prodi.json (Mapping Domain CPL ke Program Studi)
+prodi_to_fakultas.json (Mapping Program Studi ke Fakultas UNIBBA)
+kompetensi_pengembangan.json
+sertifikasi.json
+bidang_karier.json
+aktivitas_pengembangan.json
+Menyimpan script recommendation_engine.py dan shap_explainer.py yang sudah diuji di Colab ke folder local ml_service/.
+Output: Folder ml_service/models/ berisi file .pkl, folder ml_service/data/ berisi 8 file JSON, dan script Python pipeline ML.
+Keterkaitan Langkah: Menjadi fondasi data & model untuk FASE 3 (Integrasi Machine Learning).
+1.2 Perancangan Database MySQL (Data Operasional)
+Tujuan: Merancang skema basis data MySQL relasional untuk menyimpan data responden, jawaban kuesioner, hasil prediksi, SHAP, rekomendasi, dan akun admin.
+Langkah-langkah:
+Merancang tabel users (Admin authentication).
+Merancang tabel respondents (Biodata: nama, email, jenis_responden [Calon Mhs, Mhs Aktif, Alumni, Pengunjung Umum], institusi/sekolah, created_at).
+Merancang tabel questionnaire_responses (30 jawaban item skala Likert 1-5 / nilai per item, relasi ke respondents).
+Merancang tabel predictions (Relasi ke respondents, predicted_profile_id/label, confidence_score, created_at).
+Merancang tabel shap_explanations (Relasi ke predictions, menyimpan nilai SHAP 30 fitur / top feature importances dalam format JSON text).
+Merancang tabel recommendation_results (Relasi ke predictions, menyimpan Top 3 Program Studi, Top Recommendation Score, Tie-breaking resolution score, Rekomendasi Pengembangan Kompetensi, Sertifikasi, Bidang Karier, Aktivitas dalam format JSON text).
+Merancang tabel prediction_logs / history (Audit log riwayat pengisian dan transaksi prediksi).
+Output: File SQL DDL Script (schema.sql atau database.sql) & Entity Relationship Diagram (ERD).
+Keterkaitan Langkah: Dibutuhkan sebelum memulai FASE 2 (Backend Development).
+1.3 Perancangan Arsitektur Sistem & Flowcharts
+Tujuan: Memetakan alur kerja kuesioner, pengolahan data, hingga keluaran dashboard & PDF.
+Langkah-langkah:
+Membuat Flowchart Alur Pengisian Kuesioner oleh Responden (Tanpa Login).
+Membuat Flowchart Pipeline ML & Recommendation Engine (Kuesioner → XGBoost → SHAP → Rec Engine V2 → Tie Breaking → Explanation Generator → Database).
+Membuat Data Flow Diagram (DFD) & Wireframe UI untuk Landing Page, Modal Hasil, dan Dashboard Admin.
+Output: Dokumen Spesifikasi Kebutuhan Sistem (SRS) & Diagram Alur Kerja.
+Keterkaitan Langkah: Menjadi acuan desain pada FASE 2, 3, dan 4.
+1.4 Persiapan Lingkungan Pengembangan & Struktur Folder
+Tujuan: Menyiapkan Web Server local (XAMPP / Apache / PHP 8.x + MySQL) serta struktur direktori PHP Native secara rapi dan modular.
+Langkah-langkah:
+Memastikan Apache, MySQL, dan Python 3.9+ aktif di lingkungan lokal (XAMPP).
+Membuat hirarki direktori project PHP Native:
+text
+
+profil-kompetensi/
+├── assets/            (CSS, JS, Images, Fonts, Vendor libraries)
+├── config/            (Database connection, app settings)
+├── includes/          (Header, footer, sidebar, navbar, helpers)
+├── controllers/       (Logika pemrosesan form, auth, kuesioner, laporan)
+├── models/            (Query database MySQL)
+├── ml_service/        (Python script, model .pkl, data JSON KB)
+├── views/             (Halaman admin & responden)
+├── exports/           (Script PDF & Excel generator)
+└── index.php          (Landing Page utama)
+Output: Struktur direktori project yang terintegrasi dan siap dikoding.
+Keterkaitan Langkah: Menjadi basis tempat pelaksanaan FASE 2 & FASE 4.
+FASE 2 — Pembangunan Core Backend & Database (PHP Native + MySQL)
+Pada fase ini dibangun fondasi arsitektur sistem backend berbasis PHP Native murni, modul keamanan, koneksi database, serta manajemen data internal.
+
+2.1 Modul Koneksi Database & Utility Helper
+Tujuan: Membuka koneksi aman ke MySQL menggunakan PHP PDO / MySQLi murni serta membuat fungsi-fungsi pembantu (utility helpers).
+Langkah-langkah:
+Membuat file config/database.php menggunakan PDO (PHP Data Objects) dengan prepared statement untuk mencegah SQL Injection.
+Membuat helper fungsi sanitasi input (sanitize()), redirect, session flash message, dan format tanggal/angka.
+Output: Module koneksi database reusable config/database.php dan includes/functions.php.
+Keterkaitan Langkah: Digunakan oleh seluruh modul backend dan controller.
+2.2 Modul Autentikasi Admin & Session Guard
+Tujuan: Mengamankan halaman administrasi agar hanya dapat diakses oleh Administrator terotorisasi.
+Langkah-langkah:
+Membuat fungsi Login Admin dengan enkripsi password (password_verify() / password_hash()).
+Membuat Session Guard / Middleware sederhana (auth_check()) pada setiap halaman admin.
+Membuat fitur Logout dan proteksi session timeout.
+Output: Script controllers/auth.php dan pengunci akses halaman admin.
+Keterkaitan Langkah: Menjadi pelindung untuk Dashboard Admin pada FASE 4.
+2.3 Modul Pengelolaan Data Responden & Jawaban Kuesioner (CRUD Database)
+Tujuan: Menyediakan fungsi pembacaan, penyimpanan, dan penghapusan data transaksi kuesioner pada MySQL.
+Langkah-langkah:
+a. Membuat fungsi simpan biodata responden (save_respondent()).
+b. Membuat fungsi simpan 30 jawaban item kuesioner (save_questionnaire_answers()).
+c. Membuat fungsi query ambil data responden + hasil prediksi untuk tabel aktivitas admin (dengan penanganan Search, Filter Jenis Responden, dan Pagination).
+d. Membuat fungsi hapus transaksi kuesioner (Cascade delete ke prediksi & rekomendasi).
+Catatan Penting: Tidak menyediakan fungsi Edit untuk data jawaban/prediksi sesuai spesifikasi.
+Output: Model query models/RespondentModel.php dan models/PredictionModel.php.
+Keterkaitan Langkah: Menyiapkan wadah penyimpanan sebelum Machine Learning diintegrasikan pada FASE 3.
+2.4 Modul Kelola Knowledge Base (JSON Management Backend)
+Tujuan: Menyediakan fungsi CRUD untuk membaca, menambah, menghapus, serta melakukan Import & Export 8 file JSON Knowledge Base tanpa mengganggu model Machine Learning .pkl.
+Langkah-langkah:
+a. Membuat handler pembacaan file JSON (read_json_kb()).
+b. Membuat handler penambahan/penghapusan entitas Knowledge Base pada file JSON (write_json_kb()).
+c. Membuat handler Upload & Validation File JSON (Import KB) dan Download File JSON (Export KB).
+Output: Controller controllers/knowledge_base.php untuk mengelola data JSON secara aman.
+Keterkaitan Langkah: Menghubungkan manajemen data KB pada sidebar admin ke penyimpanan JSON.
+2.5 Modul Export Laporan (PDF & Excel Generator)
+Tujuan: Menyediakan pustaka backend untuk mengunduh laporan prediksi individual (PDF) maupun rekapitulasi massal (PDF & Excel).
+Langkah-langkah:
+a. Mengintegrasikan library FPDF / TCPDF / Dompdf untuk generate Sertifikat / Card Hasil Rekomendasi Responden.
+b. Mengintegrasikan library PhpSpreadsheet (atau CSV exporter native) untuk export data tabel aktivitas admin ke file Excel (.xlsx).
+Output: Script generator exports/export_pdf.php dan exports/export_excel.php.
+Keterkaitan Langkah: Digunakan oleh tombol download di Landing Page dan Dashboard Admin FASE 4.
+
+FASE 3 — Integrasi Machine Learning & Recommendation Engine (PHP ↔ Python)
+Pada fase ini dilakukan pembangunan jembatan komunikasi antara PHP Native dan script Python Machine Learning agar alur eksekusi XGBoost, SHAP, dan Recommendation Scoring Engine V2 berjalan secara seamlessly saat kuesioner disubmit.
+
+3.1 Pembangunan Script Execution Bridge Python (ml_service/bridge.py)
+Tujuan: Membuat entrypoint Python yang menerima 30 jawaban kuesioner dari PHP (via CLI Arguments / Standard Input / JSON payload) dan mengembalikan hasil lengkap dalam format JSON.
+Langkah-langkah:
+a. Menyusun script ml_service/bridge.py yang bertindak sebagai runner.
+b. Script menerima input array 30 jawaban item kuesioner dari PHP.
+Output: Script executable Python ml_service/bridge.py.
+Keterkaitan Langkah: Menjadi pintu utama pemrosesan data Machine Learning dari PHP.
+3.2 Sub-Modul Model Machine Learning & SHAP Explanation
+Tujuan: Menjalankan prediksi Profil Kompetensi menggunakan XGBoost .pkl dan menghitung kontribusi fitur menggunakan SHAP.
+Langkah-langkah:
+a. Python memuat model xgb_model.pkl dan label_encoder.pkl.
+b. Melakukan inferensi/prediksi kelas Profil Kompetensi (misal: Software Engineer, Data Scientist, Network Engineer, dll).
+c. Menghitung SHAP Values untuk 30 item input kuesioner menggunakan shap.TreeExplainer.
+d. Mengambil Top 5 item kuesioner paling berpengaruh berdasarkan SHAP values positif.
+Output: Output JSON parsial berisi: predicted_profile, confidence_score, dan shap_importance_list.
+Keterkaitan Langkah: Menghasilkan Profil Kompetensi yang akan diolah oleh Recommendation Engine.
+3.3 Sub-Modul Recommendation Scoring Engine V2 & Tie Breaking
+Tujuan: Menjalankan alur inferensi berbasis rule & scoring berdasarkan 8 Knowledge Base JSON.
+Langkah-langkah:
+a. Membaca 8 file JSON Knowledge Base.
+Alur Hirarki:
+$$\text{Item Kuesioner} \rightarrow \text{Profil Kompetensi} \rightarrow \text{Domain CPL} \rightarrow \text{Program Studi}$$
+b. Menghitung Recommendation Score untuk setiap Program Studi yang relevan dengan Profil Kompetensi hasil prediksi.
+c. Menjalankan logika Tie Breaking jika terdapat 2 atau lebih Program Studi dengan skor rekomendasi seimbang/sama.
+d. Menjalankan Explanation Generator untuk merangkai kalimat penjelasan mengapa prodi tersebut direkomendasikan.
+e. Mengambil pasangan Rekomendasi Pengembangan Kompetensi, Sertifikasi, Bidang Karier, dan Aktivitas Pengembangan dari KB.
+Output: Struct JSON lengkap berisi Top 3 Program Studi, Rekomendasi Pengembangan, dan Explanation Text.
+Keterkaitan Langkah: Menuntaskan seluruh perhitungan Machine Learning & Recommendation Engine.
+3.4 Controller Integrasi PHP (controllers/kuesioner_process.php) & Persistence
+Tujuan: Menghubungkan penanganan form PHP dengan eksekusi script Python, lalu menyimpan seluruh hasilnya ke MySQL secara atomik.
+Langkah-langkah:
+a. Responden mengirimkan form 30 jawaban di web PHP.
+b. PHP memanggil script Python via shell_exec("python ml_service/bridge.py " . escapeshellarg($json_input)) atau HTTP POST ke Python Micro-API.
+c. PHP mendeserialisasi JSON response yang dikirim oleh Python.
+d. PHP memulai MySQL Transaction:
+- Insert data ke respondents
+- Insert 30 jawaban ke questionnaire_responses
+- Insert hasil ke predictions
+- Insert data SHAP ke shap_explanations
+- Insert data hasil ke recommendation_results
+e. PHP menyimpan ID hasil di Session dan mengembalikan Response JSON ke Frontend UI.
+Output: Controller pemroses controllers/kuesioner_process.php yang siap dipanggil oleh AJAX Frontend.
+Keterkaitan Langkah: Menghubungkan Backend FASE 2 dengan antarmuka Frontend FASE 4.
+
+FASE 4 — Pembangunan Frontend UI/UX (Landing Page & Admin Panel)
+Pada fase ini dibangun antarmuka pengguna (User Interface) yang modern, responsif, dan kaya estetika visual (Clean Modern UI, Glassmorphic subtle cards, responsive grid, dynamic charts) untuk umum dan admin.
+
+4.1 Pembangunan Landing Page Utama (index.php)
+Tujuan: Menyediakan halaman depan publik yang informatif, menarik, dan ramah pengguna.
+Modul & Component:
+Section 1: Hero / Slider Header
+Menampilkan profil Universitas Bale Bandung (UNIBBA), daftar Fakultas, dan Program Studi unggulan dengan tayangan visual modern.
+Section 2: Card Form Pengisian Kuesioner (Public / No Login)
+Form Biodata singkat (Nama, Email, Jenis Responden: Calon Mhs, Mhs Aktif, Alumni, Pengunjung Umum, Sekolah/Institusi).
+Form Interaktif 30 Item Kuesioner berbasis skala Likert dengan pengelompokan yang jelas & indikator progress bar.
+Penanganan Submission via AJAX agar tidak perlu reload halaman.
+Section 3: Catalogue Cards Fakultas & Program Studi UNIBBA
+Grid card modern menampilkan seluruh Fakultas dan Program Studi di UNIBBA secara interaktif.
+Section 4: Section Edukasi & Transparansi Model
+Menjelaskan Domain CPL, Profil Kompetensi, Cara Kerja Machine Learning (XGBoost + SHAP), dan Cara Kerja Recommendation Engine secara intuitif.
+Output: Landing page penuh index.php beserta modal/section hasil kuesioner.
+Keterkaitan Langkah: Menjadi antarmuka utama pengisian kuesioner oleh responden.
+4.2 Modal / Page Hasil Prediksi & Rekomendasi Responden
+Tujuan: Menampilkan hasil prediksi Profil Kompetensi, penjelasan SHAP, dan rekomendasi prodi/pengembangan dalam bentuk Card Profesional yang dapat diunduh PDF.
+Modul & Component:
+a. Badge Profil Kompetensi Utama & Confidence Level.
+b. Visualisasi Top Fitur Penentu (SHAP Explanation) dalam bentuk bar chart / breakdown list intuitif.
+c. Card Rekomendasi Top 3 Program Studi beserta Explanation Text dan Recommendation Score.
+d. Card Rekomendasi Pengembangan Kompetensi (Sertifikasi yang disarankan, Bidang Karier, dan Aktivitas Pengembangan).
+e. Tombol "Unduh Laporan PDF" (Memanggil generator PDF FASE 2.5).
+Output: Modal / Halaman Hasil views/responden/result_card.php.
+Keterkaitan Langkah: Menampilkan luaran langsung dari pemrosesan FASE 3.
+4.3 Pembangunan Halaman Login Admin Tersembunyi (login.php)
+Tujuan: Antarmuka khusus autentikasi Administrator dengan tampilan bersih, aman, dan terlindungi.
+Output: Halaman login.php yang terhubung ke controllers/auth.php.
+Keterkaitan Langkah: Pintu masuk menuju Seluruh Panel Admin.
+4.4 Pembangunan Layout Admin Panel & Sidebar Navigation
+Tujuan: Menyusun template dasar dashboard admin lengkap dengan sidebar nav, header, dan konten responsif.
+Komponen Sidebar:
+Dashboard
+Kelola Knowledge Base
+Kelola Domain CPL
+Kelola Profil Kompetensi
+Profil Saya
+Laporan
+Logout
+Output: Layout Master views/admin/layout/header.php, sidebar.php, footer.php.
+Keterkaitan Langkah: Menjadi bingkai dasar untuk seluruh halaman pengelolaan admin.
+4.5 Pembangunan Halaman Dashboard Admin (views/admin/dashboard.php)
+Tujuan: Menampilkan ringkasan statistik komprehensif dan tabel aktivitas transaksi pengisian kuesioner.
+Modul & Component:
+7 Stat Cards:
+Total Admin
+Total Responden
+Total Calon Mahasiswa
+Total Mahasiswa Aktif
+Total Alumni
+Total Pengunjung Umum
+Total Prediksi ML
+Tabel Aktivitas Responden (DataTables / Custom Table):
+Fitur Real-time Search
+Fitur Filter Jenis Responden & Date Range
+Pagination Data
+Tombol Action: Detail Prediksi, Download PDF Individual, Download Excel Rekap, Hapus Data.
+Bebas dari tombol Edit (Data prediksi murni/read-only).
+Output: Halaman views/admin/dashboard.php.
+Keterkaitan Langkah: Pusat pemantauan aktivitas oleh administrator.
+4.6 Pembangunan Halaman Kelola Knowledge Base (views/admin/knowledge_base.php)
+Tujuan: Antarmuka manajemen 8 file JSON Knowledge Base.
+Modul & Component:
+Tab Navigasi 8 Kategori KB (Item → Profil, Profil → CPL, CPL → Prodi, dll).
+Data Table pencarian isi JSON.
+Modal Form Tambah Item KB & Tombol Hapus Row.
+Tombol "Import File JSON" dan "Export File JSON".
+Output: Halaman views/admin/knowledge_base.php.
+Keterkaitan Langkah: Memfasilitasi fungsi backend controllers/knowledge_base.php.
+4.7 Pembangunan Halaman Kelola Domain CPL (views/admin/cpl.php) & Profil Kompetensi (views/admin/profil_kompetensi.php)
+Tujuan: Antarmuka visualisasi dan pengisian master mapping Domain CPL dan Profil Kompetensi.
+Modul & Component:
+Tabel List Domain CPL & Profil Kompetensi.
+Form Modal Tambah & Action Hapus.
+Tombol Export Data.
+Output: Halaman views/admin/cpl.php dan views/admin/profil_kompetensi.php.
+Keterkaitan Langkah: Mengelola referensi visual kurikulum di admin.
+4.8 Pembangunan Halaman Laporan (views/admin/laporan.php) & Profil Admin (views/admin/profil.php)
+Tujuan: Menyediakan rekapitulasi data laporan prediksi secara menyeluruh serta manajemen profil admin.
+Modul & Component:
+Fitur Search, Filter Periode & Jenis Responden pada halaman Laporan.
+Tombol Cetak Langsung, Export PDF, dan Export Excel Massal.
+Form ganti password & update biodata pada Halaman Profil Saya.
+Output: Halaman views/admin/laporan.php dan views/admin/profil.php.
+Keterkaitan Langkah: Melengkapi seluruh modul fungsional antarmuka admin.
+
+FASE 5 — Pengujian, Validasi & Deployment (Testing & Validation)
+Pada fase ini dilakukan verifikasi menyeluruh terhadap kebenaran logika Machine Learning, fungsionalitas aplikasi web, serta validasi keselarasan metodologi SDLC Waterfall dan KDD Pipeline.
+
+5.1 Pengujian Integrasi Machine Learning & Recommendation Engine
+Tujuan: Memastikan output prediksi PHP ↔ Python 100% konsisten dan identik dengan hasil di Google Colab.
+Pengujian yang Dilakukan:
+a. Memasukkan sampel jawaban 30 item kuesioner yang sama di Colab dan Web.
+b. Memverifikasi bahwa label Profil Kompetensi XGBoost yang dihasilkan sama.
+c. Memverifikasi urutan SHAP feature importance yang dihasilkan identik.
+d. Memverifikasi kalkulasi Recommendation Score V2, logika Tie Breaking, dan rekomendasi prodi konsisten.
+Output: Dokumen Hasil Uji Konsistensi Model ML & Recommendation Engine.
+Keterkaitan Langkah: Menjamin integritas ilmiah penelitian tidak berubah saat dipindahkan ke web.
+5.2 Black Box Testing (Pengujian Fungsionalitas UI/UX)
+Tujuan: Memastikan seluruh fitur fungsional web berjalan tanpa kesalahan (error-free) dari sudut pandang pengguna.
+Pengujian yang Dilakukan:
+a. Pengisian Kuesioner tanpa login (semua jenis responden).
+b. Validasi form input (30 item wajib diisi, format email, dll).
+c. Pengujian Login Admin, proteksi session, dan Logout.
+d. Pengujian CRUD Knowledge Base JSON (Tambah, Hapus, Import, Export).
+e. Pengujian Fitur Search, Filter, dan Pagination pada Dashboard & Laporan.
+f. Pengujian Download PDF & Excel.
+Output: Matriks Hasil Uji Black Box Testing.
+Keterkaitan Langkah: Menjamin keandalan aplikasi web secara fungsional.
+5.3 White Box Testing (Pengujian Logika Backend PHP)
+Tujuan: Memastikan alur kode backend, penanganan exception, dan query MySQL berjalan efisien dan aman.
+Pengujian yang Dilakukan:
+a. Testing koneksi PDO dan transaksi database.
+b. Testing eksekusi command shell Python bridge.py dan penanganan jika terjadi timeout/exception.
+c. Testing sanitasi input untuk mencegah SQL Injection & XSS.
+Output: Laporan Code Review & White Box Test Log.
+Keterkaitan Langkah: Menjamin kualitas teknis kode backend.
+5.4 User Acceptance Test (UAT)
+Tujuan: Mengukur kelayakan antarmuka dan penerimaan pengguna (Calon Mahasiswa, Mahasiswa, Admin UNIBBA).
+Pengujian yang Dilakukan:
+a. Penyebaran kuesioner UAT kepada responden uji coba.
+b. Penilaian kemudahan pengisian kuesioner, keterbacaan hasil rekomendasi, dan performa web.
+Output: Dokumen/Kuisioner Hasil UAT.
+Keterkaitan Langkah: Syarat kelayakan aplikasi untuk penelitian skripsi.
+5.5 Validasi Alignment Pipeline KDD & Metodologi SDLC Waterfall
+Tujuan: Menyusun dokumentasi pembuktian bahwa pengembangan aplikasi taat pada alur KDD (Data Selection, Preprocessing, Transformation, Data Mining, Evaluation) dan SDLC Waterfall.
+Output: Bab IV / V Dokumentasi Skripsi (Analisis Sistem & Pembahasan Hasil).
+Keterkaitan Langkah: Penyelesaian aspek akademis skripsi.
+5.6 Deployment & Serah Terima Aplikasi
+Tujuan: Menyiapkan aplikasi agar dapat berjalan pada environment web server produksi / server lokal kampus UNIBBA.
+Langkah-langkah:
+Import file database.sql ke MySQL Server.
+Setup virtual environment Python (requirements.txt: xgboost, shap, scikit-learn, numpy, pandas).
+Konfigurasi config/database.php (DB User, Pass, Host).
+Pengujian akhir aplikasi di lingkungan web server target.
+Output: Aplikasi Web Profil Kompetensi & Rekomendasi siap pakai.
+Keterkaitan Langkah: Tahap penutup SDLC Waterfall.
+Ringkasan Matriks Dependensi SDLC Waterfall
+
+M1 Minat Pendidikan : Saya tertarik mempelajari metode pembelajaran dan pendidikan.	M2 Minat Penelitian : Saya tertarik melakukan penelitian dan pengembangan ilmu pengetahuan.	M3 Minat Teknologi : Saya tertarik mengembangkan teknologi digital dan aplikasi.	M4 Minat Analisis Data : Saya tertarik menganalisis data untuk menghasilkan informasi yang bermanfaat.	M5 Minat AI dan Data Science : Saya tertarik mempelajari Artificial Intelligence, Machine Learning, dan Data Science.	M6 Minat Pengabdian : Saya tertarik terlibat dalam kegiatan pengabdian kepada masyarakat.	M7 Minat Sosial : Saya tertarik pada isu sosial, lingkungan, dan pembangunan masyarakat.	M8 Minat Inovasi Produk : Saya tertarik menciptakan produk atau layanan baru yang bermanfaat.	M9 Minat Kewirausahaan : Saya tertarik mengembangkan usaha atau bisnis secara mandiri.	M10 Minat Kepemimpinan : Saya tertarik memimpin organisasi atau tim dalam suatu kegiatan.	GB1 Praktik Langsung : Saya lebih mudah memahami materi melalui praktik langsung.	GB2 Project Based Learning : Saya senang belajar melalui proyek atau tugas nyata.	GB3 Analitis : Saya senang menganalisis data, fakta, dan informasi sebelum mengambil keputusan.	GB4 Belajar Mandiri : Saya senang belajar secara mandiri dan mengeksplorasi referensi baru.	GB5 Teknologi Digital : Saya senang menggunakan teknologi digital dalam proses belajar.	GB6 Diskusi : Saya senang berdiskusi dan bertukar ide dengan orang lain.	GB7 Kolaboratif : Saya senang bekerja sama dalam tim untuk menyelesaikan suatu tugas.	GB8 Problem Solving : Saya senang memecahkan masalah yang kompleks dan menantang.	GB9 Perencanaan : Saya terbiasa menyusun rencana sebelum melaksanakan pekerjaan atau kegiatan.	GB10 Inovatif : Saya senang mencoba metode atau pendekatan baru dalam belajar maupun bekerja.	TK1 Karier Pendidikan : Saya ingin menjadi pendidik atau instruktur profesional.	TK2 Karier Penelitian : Saya ingin menjadi peneliti atau akademisi. 	TK3 Karier Software Development : Saya ingin bekerja sebagai software developer atau IT specialist.	TK4 Karier Data Science : Saya ingin bekerja sebagai data analyst atau data scientist.	TK5 Karier Teknologi Digital : Saya ingin berkarier di bidang teknologi digital dan sistem informasi.	TK6 Karier Pengabdian Masyarakat : Saya ingin berkontribusi dalam kegiatan pemberdayaan masyarakat.	TK7 Karier Sosial dan Pembangunan : Saya ingin bekerja di bidang sosial, kesehatan, atau pembangunan wilayah.	TK8 Karier Wirausaha : Saya ingin membangun usaha atau bisnis sendiri.	TK9 Karier Inovator : Saya ingin menciptakan inovasi yang memiliki nilai ekonomi maupun sosial.	TK10 Karier Manajerial : Saya ingin menduduki posisi manajerial atau pimpinan organisasi.
