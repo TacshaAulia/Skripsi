@@ -1,0 +1,475 @@
+begini ceritanya
+1. untuk penulisan skripsi pada pedoman di kampus itu seperti ini 
+"BAB ANALISIS, PERANCANGAN DAN HASIL 
+BIDANG INFORMATIKA 
+ANALISIS 
+1) Analisis Masalah 
+29 
+Berisi penjelasan mengenai bagian-bagian yangterkait dalam sistem 
+dan sebab-sebab terjadi suatu permasalahan. 
+2) Analisis Software 
+Berisi kebutuhan software Minimum untuk membuat aplikasi yang 
+disajikan dalam bentuk table. 
+3) Analisis Pengguna 
+Contoh: 
+Penganalisaan pengguna adalah yang berkaitan dengan yang 
+akan memakai game, pengguna game adalah anak usia Taman Kanak
+Kanak yaitu 4-6 tahun, agar game ini nantinya bisa memberikan suatu 
+kepuasan, kesenangan, dan tentunya ilmu pengetahuan ketika game 
+dimainkan oleh pengguna, maka strategi yang akan diterapkan dalam 
+game ini adalah dilihat dari sisi User Interface dan Fitur-fitur yang 
+diterapkan dalam game tersebut. 
+4) User Interface 
+Contoh : 
+User Interface dari game sangat berpengaruh terhadap minat 
+pemain dalam menggunakannya. Hal ini mencakup perangkat yang 
+digunakan sebagai piranti masukan dan keluaran dari game. Karena 
+game yang dibuat ditujukan untuk anak, maka user interface game 
+juga harus menyesuaikan dengan kepribadian anak. Kecendrungan 
+dari kepribadian anak adalah anak menyukai bentuk huruf-huruf yang 
+menarik, animasi gambar, warna-warna yang cerah, serta background 
+perpaduan antara hijau rerumputan dan batu-batuan. Maksud dan 
+tujuan memberikan tampilan tersebut agar anak dapat menyukai dan 
+tidak bosan dalam menjalankan game serta memainkannya. 
+Selain yang tersebut di atas, penggunaan gambar serta unsur 
+multimedia lain seperti suara sangat berperan dalam pembelajaran. 
+Karena anak belum dapat membaca kalimat yang panjang, maka 
+30 
+tampilan pada game seminimal mungkin menggunakan kalimat yang 
+sederhana serta gambar agar anak dapat mengerti maksudnya. 
+Komunikasi terhadap anak dilakukan melalui penggunaan gambar 
+beserta suara yang menjelaskan halhal apa saja yang harus anak 
+lakukan selama permainan. Seperti misalnya apabila anak diberikan 
+misi untuk menyusun kata dari A-Z. Jadi setiap instruksi disampaikan 
+secara lisan dan tulisan.  
+Untuk perangkat masukan digunakan mouse agar anak dapat 
+leluasa menggerakan petunjuk mouse untuk memilih huruf-huruf 
+yang dimaksud. Dengan membatasi pemakaian keypad, anak tidak 
+terlalu rumit menguasai kontrol permainan. 
+5) Fitur-Fitur 
+Contoh : 
+Fitur-fitur yang digunakan dalam game ini dimaksudkan aga 
+anak dapat dengan mudah memainkan serta tidak bosan dalam 
+memainkannya, ditunjang lagi dengan fungsi timer yang akan 
+menantang anak agar dapat dengan cepat memilih huruf yang 
+dimaksud.  
+Fungsi timer tersebut akan mempengaruhi hadiah yang akan 
+didapatkan oleh anak, karena kecendrungan anak biasanya diberikan 
+hadiah agar lebih bersemangat, seperti bila sesuai target waktu, maka 
+akan mendapatkan bintang emas, bila tidak sesuai maka akan 
+mendapatkan bintang perak. Yang terpenting dalam bagian fitur ini 
+adalah: 
+• Adanya tingkatan atau level permainan, tentunya dengan kesulitan 
+yang beringkat. Keberadaan level ini dapat menjadikan user 
+penasaran akan tantangan atau level selanjutnya, sehingga anak 
+selalu berusaha sebaik mungkin dalam melewati setiap tantangan 
+atau level. 
+• Pengenalan huruf-huruf dilakukan dengan cara mengurutkan 
+susunan huruf A-Z. Pengenalan juga dilakukan dengan 
+31 
+menampilkan objek-objek yang diawali oleh huruf yang 
+bersangkutan dengan cara menjodohkan. 
+• Diantara satu level, terdapat beberapa sub level yang mewakili 
+target yang akan dicapai. Untuk dapat mencapai level berikutnya, 
+pemain harus menyelesaikan target. Dengan ini, diharapkan 
+pemain dapat menguasai beberapa huruf sekaligus dalam satu 
+level. 
+• Pemain tidak hanya mengenal huruf, namun dilatih juga untuk 
+membentuk kata yang sesuai soal berupa objek yang ditanyakan. 
+Disediakan pula hadiah berupa bintang emas dan perak bila 
+menyelesaikan rule. Jadi diharapkan agar permainan ini dapat 
+menimbulkan unsur kesenangan dan keinginan untuk terus 
+dilanjutkan hingga selesai. 
+Dari hasil yang didapat dari hal di atas paduan antara User 
+Interface dengan fitur game perlu dibentuk untuk menciptakan produk 
+yang dapat memberikan manfaat luas dan nyata bagi masyarakat. 
+6) Analisis Data 
+Penganalisaan data berupa data masukan, keluaran, dan proses 
+untuk penunjang bagi sistem informasi yang akan dibuat. 
+7) Analisis Biaya 
+Berisi analisis biaya untuk pengembangan sistem. Diantaranya, 
+biaya analisis untuk analis, programmer, spesifikasi perangkat keras, 
+perangkat lunak dan alat-alat lain yang mungkin dibutuhkan yang 
+disajikan dalam bentuk tabel. 
+PERANCANGAN 
+1) Diagram Arus Data (DAD) - UML 
+2) Entity Relasional Diagram (ERD) 
+3) Normalisasi 
+• Normalisasi Pertama (NF-1) 
+32 
+• Normalisasi Ke-2 (NF-2) 
+• Normalisasi Ke-3 (NF-3) 
+4) Struktur Tabel 
+5) Desain; Menjelaskan tentang tampilan program secara keseluruhan 
+misal terdiri dari Menu, Sub Menu, Splash, dan lain-lain."
+2. tapi pembimbing menyarankan untuk menggunakan step by  step berdasarkan dari flowchart bab atau kerangka pikir bab, ini kerangka pikir aku atau bab aku 
+"
+3.2	Deskripsi
+Kerangka pikir penelitian ini menggambarkan tahapan pembangunan sistem cerdas pemetaan profil kompetensi dan rekomendasi pengembangan mahasiswa di Universitas Bale Bandung. Tahap awal berfokus pada pengumpulan data kurikulum dari 12 program studi untuk menyintesis delapan domain CPL menjadi enam Profil Kompetensi Mahasiswa (PC01–PC06), dilanjutkan penyebaran kuesioner 30 butir (variabel minat, gaya belajar, dan tujuan karier) kepada 161 responden.
+Tahap kedua menerapkan metodologi Knowledge Discovery in Databases (KDD) untuk memproses data responden, mulai dari prapemrosesan, pelabelan aturan (rule-based labeling), hingga komparasi model klasifikasi Decision Tree dan XGBoost. Model terpilih selanjutnya diinterpretasikan menggunakan SHAP untuk memetakan kontribusi faktor pembentuk kompetensi secara transparan.
+Tahap akhir mengintegrasikan hasil prediksi model ke dalam Recommendation Scoring Engine dan basis pengetahuan (Knowledge Base) guna menentukan peringkat rekomendasi program studi dan jalur pengembangan mahasiswa. Seluruh proses tersebut diimplementasikan ke dalam aplikasi berbasis web menggunakan model pengembangan Waterfall.
+3.2.1.	Metode Pengumpulan Data
+Tahap awal penelitian dilakukan melalui proses pengumpulan data untuk memperoleh data dan informasi yang diperlukan dalam membangun model klasifikasi profil kompetensi mahasiswa serta sistem rekomendasi pengembangan mahasiswa. Pengumpulan data dilakukan menggunakan empat teknik, yaitu observasi, wawancara, studi literatur, dan dokumentasi. Data yang diperoleh dari proses tersebut digunakan sebagai dasar dalam analisis kurikulum, pembentukan profil kompetensi mahasiswa, penyusunan instrumen penelitian, pembangunan dataset, serta perancangan model dan sistem rekomendasi.
+A.	Observasi
+Observasi dilakukan dengan mengamati kondisi yang berkaitan dengan proses pengembangan mahasiswa dan kebutuhan dalam menentukan arah pengembangan sesuai dengan minat, kemampuan, serta tujuan karier. Observasi juga dilakukan untuk memperoleh gambaran mengenai kondisi nyata yang menjadi dasar permasalahan penelitian.
+B.	Wawancara
+Wawancara dilakukan dengan Gin Gin Ginanjar, S.Pd., M.Pd., selaku Kepala Bagian Hubungan Masyarakat dan Penerimaan Mahasiswa Baru (PMB) Bidang Kemahasiswaan Universitas Bale Bandung, mahasiswa aktif, serta ketua program studi dari 12 program studi yang menjadi objek penelitian. Wawancara dengan Kepala Bagian Hubungan Masyarakat dan PMB bertujuan untuk memperoleh informasi mengenai permasalahan yang sering dihadapi calon mahasiswa dalam menentukan program studi, serta kebutuhan terhadap sistem yang dapat mendukung proses pengembangan mahasiswa. Selain itu, wawancara dengan mahasiswa aktif dilakukan untuk memperoleh informasi mengenai pengalaman dan kendala yang dihadapi selama menjalani proses pengembangan diri di perguruan tinggi. Sementara itu, wawancara dengan ketua program studi dilakukan untuk memperoleh data mengenai Capaian Pembelajaran Lulusan (CPL), Profil Lulusan (PL), dan karakteristik lulusan pada masing-masing program studi sebagai dasar dalam proses sintesis CPL dan pembentukan profil kompetensi mahasiswa.
+C.	Studi Literatur
+Studi literatur dilakukan dengan menelaah berbagai referensi yang relevan sebagai dasar penyusunan landasan teori dan metodologi penelitian. Peneliti menganalisis sekitar 50 artikel ilmiah mengenai machine learning, sistem rekomendasi, klasifikasi pendidikan, Decision Tree, XGBoost, XAI, KDD, dan pengembangan sistem berbasis web. Dari hasil kajian tersebut, dipilih lima jurnal yang paling relevan sebagai acuan utama untuk mengidentifikasi research gap, menentukan metode, serta mendukung pemilihan algoritma dan pendekatan penelitian.
+D.	Dokumentasi
+Dokumentasi dilakukan dengan mengumpulkan dokumen akademik dari 12 program studi Universitas Bale Bandung. Dokumen yang diperoleh meliputi CPL, PL, struktur kurikulum, serta informasi mata kuliah pendukung. Meskipun tidak seluruh program studi memberikan dokumen yang sama secara lengkap, sebagian besar program studi menyediakan data CPL, PL, dan mata kuliah yang dapat digunakan sebagai dasar analisis kurikulum.
+3.2.2.	Analisis Kurikulum
+Analisis kurikulum dilakukan terhadap dokumen Profil Lulusan (PL), Capaian Pembelajaran Lulusan (CPL), dan mata kuliah pendukung dari 12 program studi Universitas Bale Bandung. Analisis menggunakan metode Content Analysis dengan mengidentifikasi dan memberikan kode (coding) pada kompetensi yang memiliki kesamaan makna, kemudian mengelompokkannya berdasarkan keterkaitan kompetensi. Hasil pengelompokan digunakan sebagai dasar sintesis CPL.
+3.2.3.	Sintesis CPL
+Sintesis CPL dilakukan setelah analisis kurikulum dengan menyederhanakan CPL berdasarkan kesamaan makna ke dalam domain kompetensi. Berdasarkan Content Analysis terhadap CPL dan Profil Lulusan (PL) dari 12 program studi, diperoleh delapan domain utama, yaitu CPL01 (Pendidikan dan Pembelajaran), CPL02 (Penelitian dan Pengembangan Ilmu), CPL03 (Teknologi Digital dan Sistem Informasi), CPL04 (Analisis Data dan Pengambilan Keputusan), CPL05 (Sosial, Pengabdian, dan Pemberdayaan Masyarakat), CPL06 (Kewirausahaan dan Inovasi), CPL07 (Kepemimpinan dan Manajemen), serta CPL08 (Profesionalisme dan Etika). Kedelapan domain tersebut mencakup seluruh kompetensi dalam dokumen CPL dan menjadi dasar dalam pembentukan profil kompetensi mahasiswa.
+3.2.4.	Pembentukan Profil Kompetensi
+Pembentukan profil kompetensi dilakukan dengan memetakan keterkaitan antara delapan domain CPL untuk membentuk kelompok kompetensi yang merepresentasikan karakteristik lulusan. Hasil pemetaan menghasilkan enam profil kompetensi, yaitu PC01 Educational and Research Innovator, PC02 Digital Technology Specialist, PC03 Data and Analytical Intelligence Specialist, PC04 Community Development Specialist, PC05 Entrepreneurship and Innovation Specialist, dan PC06 Professional Leader. Profil tersebut selanjutnya digunakan sebagai dasar penyusunan kuesioner dan rule-based initial labeling untuk menghasilkan target klasifikasi pada model machine learning.
+3.2.5.	Penyusunan Kuesioner
+Kuesioner disusun berdasarkan hasil analisis kurikulum, sintesis CPL, pembentukan profil kompetensi, kuesioner pra-penelitian dengan jumlah 75 responden serta hasil observasi, wawancara, dan studi literatur. Instrumen mengukur tiga variabel, yaitu minat, gaya belajar, dan tujuan karier.
+Kuesioner terdiri atas 30 butir pernyataan dengan skala Likert lima tingkat. Setiap butir dipetakan ke profil kompetensi mahasiswa dan hasilnya digunakan sebagai fitur dalam proses klasifikasi.
+3.2.6.	Pengumpulan Data Responden
+Setelah instrumen selesai disusun, kuesioner disebarkan secara online menggunakan Google Forms. Responden penelitian terdiri atas mahasiswa aktif dan alumni yang menjadi sumber data untuk menggambarkan karakteristik responden dalam penelitian.
+Dari proses pengumpulan data diperoleh 161 responden. Data yang terkumpul kemudian diperiksa dan digunakan sebagai data awal dalam proses pengolahan menggunakan metode Knowledge Discovery in Databases (KDD).
+Data responden yang digunakan terutama berupa jawaban terhadap 30 butir pernyataan kuesioner yang menjadi dasar pembentukan dataset untuk proses klasifikasi profil kompetensi mahasiswa.
+3.2.7.	Metode Pemrosesan Data
+Data yang diperoleh dari kuesioner selanjutnya diproses menggunakan metode Knowledge Discovery in Databases (KDD). Seluruh proses pengolahan dan pemodelan dilakukan menggunakan bahasa pemrograman Python pada lingkungan Google Colab. Pustaka yang digunakan antara lain Pandas dan NumPy untuk pengolahan data, Scikit-learn untuk proses pemodelan dan evaluasi, XGBoost untuk algoritma XGBoost, serta SHAP untuk interpretasi model.
+Tahapan pemrosesan data terdiri atas lima tahap berikut:
+1.	Selection, tahap ini dipilih data yang relevan dengan penelitian dari hasil pengisian kuesioner. Data yang digunakan mencakup jawaban responden terhadap 30 item kuesioner serta atribut yang diperlukan dalam proses pembentukan dataset klasifikasi.
+2.	Preprocessing, tahap preprocessing dilakukan untuk memastikan data berada dalam kondisi yang dapat digunakan untuk proses pemodelan. Pemeriksaan dilakukan terhadap kelengkapan data, data ganda, format data, dan konsistensi jawaban responden.
+3.	Transformation, pada tahap ini jawaban kuesioner diubah ke dalam bentuk numerik sesuai dengan skala Likert. Selanjutnya dilakukan pembentukan fitur dan rule-based initial labeling berdasarkan pemetaan item terhadap enam profil kompetensi mahasiswa, yaitu PC01 sampai PC06. Label yang dihasilkan digunakan sebagai target dalam proses klasifikasi. Dengan demikian, data hasil transformasi memiliki 30 fitur kuesioner dan satu label profil kompetensi mahasiswa.
+4.	Data Mining, tahap data mining digunakan untuk membangun model klasifikasi profil kompetensi mahasiswa. Dua algoritma digunakan dalam penelitian ini, yaitu Decision Tree dan XGBoost. Kedua model dilatih menggunakan dataset yang sama sehingga performanya dapat dibandingkan secara objektif. Evaluasi model dilakukan dengan pendekatan cross validation untuk memperoleh gambaran performa model yang lebih stabil.
+5.	Evaluation, tahap evaluasi dilakukan untuk membandingkan kinerja kedua model berdasarkan Accuracy, Precision, Recall, F1-Score, Confusion Matrix, dan ROC-AUC. Hasil perbandingan digunakan untuk menentukan model yang paling sesuai sebagai model utama penelitian. Model terbaik selanjutnya dianalisis menggunakan SHapley Additive exPlanations (SHAP) untuk mengetahui kontribusi fitur terhadap hasil klasifikasi. Analisis ini digunakan untuk memberikan penjelasan mengenai faktor yang berpengaruh terhadap keputusan model.
+3.2.8.	Metode Pembuatan Model
+Pada tahap ini dilakukan pembangunan model klasifikasi profil kompetensi mahasiswa menggunakan algoritma Decision Tree dan XGBoost. Proses dilakukan dengan bahasa pemrograman Python pada lingkungan Google Colab menggunakan dataset hasil tahapan Knowledge Discovery in Databases (KDD). Data tersebut memiliki 30 fitur yang berasal dari item kuesioner dan enam kelas profil kompetensi mahasiswa, yaitu PC01 sampai PC06.
+Model Decision Tree digunakan sebagai model pembanding yang memiliki struktur keputusan relatif mudah dipahami, sedangkan XGBoost digunakan sebagai model pembanding berbasis ensemble learning. Kedua model dilatih menggunakan data yang sama dan dievaluasi dengan K-Fold Cross Validation untuk memperoleh gambaran performa yang lebih stabil.
+Hasil pengujian kedua model kemudian dibandingkan menggunakan Accuracy, Precision, Recall, F1-Score, dan ROC-AUC. Model dengan hasil evaluasi terbaik ditetapkan sebagai model utama yang digunakan dalam sistem klasifikasi. Tahapan evaluasi dan perbandingan ini mengacu pada proses data mining dan evaluation yang telah dijelaskan pada KDD. 
+Selanjutnya, model terpilih dianalisis menggunakan SHapley Additive exPlanations (SHAP) untuk mengetahui kontribusi fitur terhadap hasil klasifikasi. Hasil interpretasi ini digunakan untuk memberikan penjelasan mengenai faktor yang berpengaruh terhadap profil kompetensi mahasiswa sehingga hasil klasifikasi dapat dipahami dengan lebih baik. Pendekatan tersebut sejalan dengan penggunaan XAI dalam penelitian ini untuk meningkatkan transparansi hasil klasifikasi.
+3.2.9.	Metode Pembentukan Rekomendasi
+Pembentukan rekomendasi dilakukan setelah diperoleh hasil klasifikasi profil kompetensi mahasiswa. Proses ini menggunakan knowledge base dan mekanisme scoring untuk menentukan rekomendasi yang paling sesuai berdasarkan jawaban kuesioner dan hasil pemetaan kompetensi.
+1.	Knowledge Base, berisi pemetaan antara item kuesioner, kompetensi, dan alternatif rekomendasi seperti pengembangan akademik, non-akademik, karier, dan program studi. Setiap hubungan memiliki bobot yang menunjukkan tingkat keterkaitannya. 
+2.	Recommendation Scoring, setiap alternatif rekomendasi dihitung berdasarkan nilai jawaban kuesioner dan bobot pada knowledge base. Hasil perhitungan berupa skor kesesuaian yang digunakan sebagai dasar penentuan rekomendasi.
+3.	Ranking, alternatif rekomendasi diurutkan berdasarkan skor kesesuaian dari nilai tertinggi hingga terendah. Alternatif dengan skor tertinggi menjadi rekomendasi utama.
+4.	Tie-Breaking, apabila terdapat rekomendasi dengan skor yang sama, sistem menggunakan aturan tie-breaking yang telah ditentukan untuk menetapkan urutan secara konsisten.
+5.	Explanation Generator, sistem menghasilkan penjelasan singkat mengenai alasan suatu rekomendasi diberikan berdasarkan keterkaitan jawaban, profil kompetensi, dan skor rekomendasi.
+6.	Traceability, proses rekomendasi dapat ditelusuri dari item kuesioner hingga profil kompetensi dan rekomendasi yang dihasilkan. Hal ini menjaga keterkaitan antara data masukan, hasil klasifikasi, dan keluaran sistem.
+7.	Decision Audit, digunakan untuk memeriksa aliran keputusan dari data masukan, hasil klasifikasi, proses scoring, hingga rekomendasi akhir sehingga hasil yang diberikan dapat ditelusuri dan diperiksa kembali.
+
+3.2.10.	Metode Pengembangan Sistem
+Metode pengembangan sistem yang digunakan adalah Software Development Life Cycle (SDLC) dengan model Waterfall karena tahapan pengembangan dilakukan secara berurutan. Tahapannya meliputi:
+1.	Analysis, mengidentifikasi kebutuhan sistem, data, aktor, dan proses integrasi model klasifikasi serta rekomendasi.
+2.	Design, merancang alur sistem, UML, basis data, antarmuka, serta integrasi machine learning, Knowledge Base, dan rekomendasi.
+3.	Implementation, membangun aplikasi berbasis web menggunakan PHP, Laravel, dan MySQL serta mengintegrasikan model klasifikasi dan rekomendasi.
+4.	Testing, menguji fungsi sistem menggunakan Black Box Testing dan User Acceptance Testing (UAT), sedangkan evaluasi model mengacu pada hasil pengujian machine learning.
+5.	Maintenance, melakukan perbaikan kesalahan, penyempurnaan fitur, dan pengembangan sistem sesuai kebutuhan.
+3.2.11.	Output Sistem
+Sistem menghasilkan keluaran berdasarkan hasil klasifikasi profil kompetensi dan proses recommendation scoring. Hasil tersebut disajikan kepada pengguna secara ringkas agar dapat digunakan sebagai bahan pertimbangan dalam menentukan arah pengembangan diri. Output sistem meliputi:
+1.	Profil kompetensi mahasiswa (PC01–PC06) sebagai hasil klasifikasi berdasarkan jawaban kuesioner. 
+2.	Informasi faktor yang memengaruhi klasifikasi berdasarkan hasil interpretasi SHAP, sehingga pengguna dapat mengetahui faktor yang berkontribusi terhadap profil kompetensinya. 
+3.	Rekomendasi pengembangan akademik yang disesuaikan dengan profil dan karakteristik pengguna. 
+4.	Rekomendasi pengembangan non-akademik yang dapat mendukung penguatan kompetensi pengguna. 
+5.	Rekomendasi karier yang diperoleh melalui proses pencocokan dan pembobotan pada Knowledge Base. 
+6.	Rekomendasi program studi berdasarkan keterkaitan profil kompetensi dengan kompetensi dan karakteristik program studi. 
+7.	Penjelasan rekomendasi yang menunjukkan dasar atau faktor yang mendukung rekomendasi yang diberikan. 
+8.	Informasi keterlacakan keputusan yang menunjukkan hubungan antara data masukan, profil kompetensi, dan rekomendasi sehingga proses pengambilan keputusan dapat ditelusuri dan diperiksa.
+"
+3. ini hasil sementara dari bab 4 yang aku tapi masih ada revisi saat sidang akhir kemarin 
+"
+BAB IV ANALISIS, PERANCANGAN DAN HASIL	58
+4.1.	Hasil Analisis Kurikulum	58
+4.1.1.	Hasil Analisis Profil Lulusan dan CPL	58
+4.1.2.	Hasil Content Analysis	59
+4.1.3.	Hasil Sintesis 8 Domain CPL	60
+4.1.4.	Hasil Pembentukan Profil Kompetensi PC01-PC06	61
+4.1.5.	Matriks CPL dan Profil Kompetensi	62
+4.2.	Hasil Penyusunan Instrumen dan Pengumpulan Data	64
+4.2.1.	Hasil Penyusunan Kuesioner	64
+4.2.2.	Karakteristik Responden	65
+4.2.3.	Distribusi Jawaban Responden	66
+4.2.4.	Hasil Konversi Skala Likert	66
+4.3.	Hasil Pembentukan Dataset	67
+4.3.1.	Struktur Dataset	67
+4.3.2.	Selection	68
+4.3.3.	Preprocessing	68
+4.3.4.	Transformation	69
+4.3.5.	Feature Dataset	70
+4.3.6.	Rule-Based Initial Labeling	70
+4.3.7.	Distribusi Label	71
+4.4.	Hasil Pembangunan Model Klasifikasi	71
+4.4.1.	Pembagian Data	71
+4.4.2.	Model Decision Tree	72
+4.4.3.	Model XGBoost	72
+4.4.4.	Hyperparameter Tuning	73
+4.4.5.	K-Fold Cross Validation	74
+4.5.	Hasil Evaluasi Model	74
+4.5.1.	Evaluasi Decision Tree	74
+4.5.2.	Evaluasi XGBoost	75
+4.5.3.	Confusion Matrix	75
+4.5.4.	Accuracy, Precision, Recall, dan F1-Score	76
+4.5.5.	ROC-AUC	77
+4.5.6.	Analisis Overfitting	77
+4.5.7.	Perbandingan dan Pemilihan Model Terbaik	78
+4.6.	Interpretasi Model dengan SHAP	78
+4.6.1.	Global Feature Importance	78
+4.6.2.	SHAP Summary Plot	79
+4.6.3.	Arah Kontribusi Fitur	80
+4.6.4.	Interpretasi Faktor Pembentuk Profil Kompetensi	81
+4.6.5.	Validasi Interpretasi Model	82
+4.7.	Hasil Recommendation Engine	82
+4.7.1.	Knowledge Base Rekomendasi	82
+4.7.2.	Recommendation Scoring	83
+4.7.3.	Ranking	84
+4.7.4.	Tie-Breaking	84
+4.7.5.	Explanation Generator	85
+4.7.6.	Traceability dan Decision Audit	85
+4.7.7.	Rekomendasi Pengembangan Akademik	86
+4.7.8.	Rekomendasi Pengembangan Non-Akademik	86
+4.7.9.	Rekomendasi Karier	87
+4.7.10.	Rekomendasi Sertifikasi	88
+4.7.11.	Rekomendasi Program Studi	88
+4.8.	Analisis Sistem	89
+4.8.1.	Analisis Masalah	89
+4.8.2.	Analisis Software	90
+4.8.3.	Analisis Pengguna	91
+4.8.4.	Analisis Data	91
+4.8.5.	Analisis Fitur	92
+4.8.6.	Analisis Kebutuhan Sistem	93
+4.9.	Perancanan Sistem	95
+4.9.1.	Unified Modeling Language	95
+4.3.8.	Entity Relational Diagram	102
+4.3.9.	Struktur Tabel	103
+4.3.10.	Desain	111
+"
+4. beberapa catatan revisi:
+(
+a. masukkan seluruh mapping yang menjadi dasar penyusunan, ada beberapa data yang aku buat secara manual dan di google colab diantaranya (BAGIAN 1: Persiapan Lingkungan (Preparation)
+Import Library
+Import Dataset
+Import Knowledge Base
+Definisi 30 Item
+Definisi Profil Kompetensi
+Definisi Domain CPL
+Definisi Program Studi
+Definisi Master Kompetensi
+Definisi Aktivitas Akademik
+Definisi Aktivitas Kemahasiswaan
+Definisi Karier
+Definisi Sertifikasi
+Mapping Program Studi --> Fakultas
+Aturan Bobot untuk Mapping
+Seluruh Mapping Item Kuesioner
+Seluruh Mapping Profil Kompetensi
+Seluruh Mapping Domain CPL
+Seluruh Mapping Program Studi
+Seluruh Mapping Master Kompetensi
+Seluruh Mapping Aktivitas
+Validasi Seluruh Knowledge Base
+BAGIAN 2: KDD STEP 1 - SELECTION
+BAGIAN 3: KDD STEP 2 - PREPROCESSING
+Konsolidasi Knowledge Base
+Tabel Referensi Bobot dan Skor Maksimum Profil
+Perhitungan Skor & Normalisasi
+Fungsi Perhitungan Universal
+Pemetaan Profil ke CPL
+Implementasi Tie-Breaking Logic (Rule-Based Labeling)
+Penentuan Initial Label & 6. Penggabungan ke Dataset
+Distribusi Label, 8. Quality Check & 9. Visualisasi
+Dataset Final
+BAGIAN 4: KDD STEP 3 - TRANSFORMATION
+Feature Selection
+Label Encoding
+Train-Test Split
+Validasi Distribusi Data
+Dataset Ready
+BAGIAN 5: KDD STEP 4 - DATA MINING (Machine Learning)
+Baseline Model (Decision Tree)
+Apakah perlu menggunakan boosting?
+Peningkatan Model (XGBoost)
+Perbandingan Model
+BAGIAN 6: KDD STEP 5 - INTERPRETATION / EVALUATION (SHAP Analysis)
+Interpretasi Hasil SHAP (Explainable AI)
+BAGIAN 7: RECOMMENDATION SCORING ENGINE V2
+Knowledge Base (KB) Consolidation
+Recommendation Scoring Alur & Audit
+Recommendation Ranking & Tie-Breaking
+Explanation Generator
+Eksekusi Engine & Output JSON
+BAGIAN 8: DEMONSTRASI PIPELINE KDD
+RINGKASAN PIPELINE KDD
+BAGIAN 9: TRACEABILITY ENGINE
+BAGIAN 10: DECISION AUDIT ENGINE
+Audit Tahap 1: Item Kuesioner -> Profil Kompetensi
+Audit Tahap 2: Profil Kompetensi -> Domain CPL
+Audit Tahap 3: Domain CPL -> Program Studi
+Audit Tahap 4: Top 3 Program Studi (Transparency Comparison)
+Audit Tahap 5: Decision Audit Trail (Visualisasi Aliran Skor)
+Audit Tahap 6: Decision Audit Report (Executive Summary)
+BAGIAN 11: DEPLOYMENT
+1 & 2. Export Model & Label Encoder
+3 & 4. Export JSON & Knowledge Base
+Export Recommendation Metadata
+Uji Label (Validation Check)
+Selesai (Deployment Finalized)
+Panduan Integrasi Aset ke Aplikasi
+)
+b. untuk bab 5 itu jika sesuai dengan pedoman kampus adalah sebagai berikut (IMPLEMENTASI DAN PENGUJIAN 
+TEKNIK INFORMASIKA 
+HASIL 
+1) Listing Program; berisi kode-kode program yang disajikan per modul 
+2) Implementasi Sistem; Tempat dan Waktu Implementasi 
+3) Spesifikasi Sistem 
+• Perangkat Keras; Berisi penjelasan spesifikasi minimum h/w 
+untuk menjalankan program yang disajikan dalam bentuk table 
+• Perangkat Lunak; Berisi penjelasan mengenai spesifikasi 
+minimum s/w untuk menjalankan program yang disajikan dalam 
+bentuk table 
+4) Instalasi Sistem 
+Berisi penjelasan mengenai langkah-langkah instalasi sistem yang 
+terdiri dari: 
+• Instalasi Aplikasi 
+• Instalasi Database 
+5) Menjalankan Sistem 
+Berisi penjelasan mengenai jalannya sistem yang disajikan per modul.)
+tapi penguji 2 itu menekankan untuk seluruh evaluasi, pengujian, validasi itu ada di bab 5 jangan ada di bab 4, serta tambahkan juga perhitungan manual yang memang harus ada untuk bahan perbandingan (nah kira2 ini masuk bab dan poin mana). berikut isi dari bab 5 saya sekarang "BAB V IMPLEMENTASI DAN PENGUJIAN	120
+5.1.	Implementasi	120
+5.1.1.	Listing Program	120
+5.1.2.	Implementasi Sistem	124
+5.1.3.	Spesifikasi Sistem	131
+5.1.4.	Instalasi Sistem	132
+5.1.5.	Menjalankan Sistem	133
+5.2.	Pengujian	134
+5.2.1.	Black Box Testing	134
+5.2.2.	User Acceptance Testing	136
+"
+ini tabel dan gambar milik saya
+"
+DAFTAR GAMBAR
+Gambar 2.1 Alur Implementasi Outcome-Based Education (OBE)	16
+Gambar 2.2 Workflow Machine Learning	21
+Gambar 2.3 Arsitektur Rule-Based Labeling	23
+Gambar 2.4 Tahapan Umum Feature Engineering	24
+Gambar 2.5 Struktur Decision Tree	25
+Gambar 2.6 Arsitektur XGBoost	28
+Gambar 2.7 Proses K-Fold Cross Validation	29
+Gambar 2.8 Tahapan Explainable Artificial Intelligence	30
+Gambar 2.9 Arsitektur SHAP dalam Interpretasi Model Machine Learning	32
+Gambar 2.10 Tahapan Knowledge Discovery in Databases (KDD)	34
+Gambar 2.11 Arsitektur Sistem Rekomendasi	38
+Gambar 2.12 Arsitektur Kerja PHP pada Aplikasi Web	39
+Gambar 2.13 Arsitektur Pengolahan Data pada MySQL	40
+Gambar 2.14 Arsitektur Sistem Berbasis Web Tiga Lapisan	41
+Gambar 2.15 Diagram Model Waterfall	46
+Gambar 2.16 Alur Black Box Testing	47
+Gambar 2.17 Alur User Acceptance Testing (UAT)	48
+Gambar 3.1 Kerangka Pikir	49
+Gambar 4.1 Alur Transformasi Data	69
+Gambar 4.2 Confusion Matrix XGBoost Optimized	76
+Gambar 4.3 SHAP Bar Plot - Tingkat Kepentingan Fitur Global	79
+Gambar 4.4 SHAP Dot Plot	80
+Gambar 4.5 Alur Proses Pemeringkatan Alternatif	84
+Gambar 4.6 Diagram Alur Audit Keputusan (End-to-End Traceability)	85
+Gambar 4.7 Use Case Diagram Admin	95
+Gambar 4.8 Use Case Diagram Pengguna	96
+Gambar 4.9 Activity Diagram Pengisian Kuesioner dan Prosesnya	98
+Gambar 4.10 Sequence Diagram Hasil	99
+Gambar 4.11 Class Diagram Sistem Profil Kompetensi	101
+Gambar 4.10 Entity Relational Diagram (ERD) Sistem	102
+Gambar 4.13 Desain Wireframe Kuesioner	112
+Gambar 4.14 Desain Wireframe Formulir Identitas Pengguna	112
+Gambar 4.15 Desain Wireframe Halaman Hasil Kuesioner	113
+Gambar 4.16 Desain Wireframe Unduh Laporan Hasil Kuesioner	114
+Gambar 4.17 Desain Antarmuka Kuesioner	115
+Gambar 4.18 Desain Antarmuka Formulir Identitas Pengguna	116
+Gambar 4.19 Desain Antarmuka Halaman Hasil Kuesioner	117
+Gambar 4.20 Desain Antarmuka Unduh Laporan Hasil Kuesioner	118
+Gambar 5.1 Implementasi Recommendation Engine	126
+Gambar 5.2 Implementasi Halaman Kuesioner	128
+Gambar 5.3 Implementasi Halaman Formulir Identitas Pengguna	128
+Gambar 5.4 Implementasi Halaman Hasil Kuesioner	129
+Gambar 5.5 Implementasi Halaman Unduh Laporan Hasil	130
+Gambar 5.6 Alur Menjalankan Sistem	133
+ 
+DAFTAR TABEL
+Tabel 2.1 Jurnal Acuan	13
+Tabel 2.2 Skala Likert	20
+Tabel 2.3 Confusion Matrix	34
+Tabel 2.4 Struktur Classification Report	36
+Tabel 2.5 Interpretasi nilai AUC	37
+Tabel 2.6 Use Case Diagram	42
+Tabel 2.7 Activity Diagram	43
+Tabel 2.7 Sequence Diagram	44
+Tabel 2.8 Class Diagram	44
+Tabel 4.1 Hasil Sintesis 8 Domain CPL	60
+Tabel 4.2 Hasil Pembentukan Profil Kompetensi PC01-PC06	61
+Tabel 4.3 Matriks CPL dan Profil Kompetensi	63
+Tabel 4.4 Hasil Penyusunan Kuesioner	64
+Tabel 4.5 Karakteristik Responden Berdasarkan Status	65
+Tabel 4.6 Distribusi Jawaban Responden	66
+Tabel 4.7 Konversi Skala Likert	67
+Tabel 4.8 Contoh Struktur Data Hasil Integrasi	68
+Tabel 4.9 Parameter Seleksi Atribut Dataset	68
+Tabel 4.10 Hasil Audit Kualitas Data (Validation)	69
+Tabel 4.12 Metadata Feature Dataset Final	70
+Tabel 4.13 Aturan Resolusi Skor Seri (Tie-Breaking)	70
+Tabel 4.14 Sebaran Profil Kompetensi Mahasiswa	71
+Tabel 4.15 Ringkasan Pembagian Dataset Latih dan Uji	72
+Tabel 4.15 Konfigurasi dan Hasil Baseline Decision Tree	72
+Tabel 4.16 Evolusi Model XGBoost	73
+Tabel 4.17 Parameter Terbaik Hasil Pencarian Grid	73
+Tabel 4.18 Skor Akurasi Per Lipatan (Fold)	74
+Tabel 4.19 Performa Dasar Decision Tree	75
+Tabel 4.20 Performa Optimized XGBoost	75
+Tabel 4.21 Ringkasan Metrik Klasifikasi Final	76
+Tabel 4.22 Skor Diskriminasi Model	77
+Tabel 4.23 Perbandingan Stabilitas Model	77
+Tabel 4.24 Matriks Keputusan Pemilihan Model	78
+Tabel 4.25 Analisis Korelasi Nilai Fitur terhadap Dampak Prediksi	81
+Tabel 4.26 Pemicu Utama (Key Drivers) per Profil Kompetensi	81
+Tabel 4.28 Hasil Uji Konsistensi Logika (Expert vs Machine)	82
+Tabel 4.29 Parameter Kelompok Basis Pengetahuan (Knowledge Base Assets)	83
+Tabel 4.29 Hierarki Resolusi Skor Seri (Tie-Breaking Rules)	84
+Tabel 4.30 Daftar Rekomendasi Aktivitas Akademik per Profil	86
+Tabel 4.31 Rekomendasi Organisasi dan UKM Penunjang	87
+Tabel 4.32 Proyeksi Prospek Karier Berdasarkan Profil	87
+Tabel 4.33 Rekomendasi Sertifikasi Profesional	88
+Tabel 4.34 Hasil Akhir Rekomendasi Program Studi (Top-3)	88
+Tabel 4.35 Analisis Masalah	89
+Tabel 4.36 Kebutuhan Perangkat Lunak Minimum	90
+Tabel 4.37 Analisis Pengguna	91
+Tabel 4.38 Analisis Data	92
+Tabel 4.39 Analisis Fitur Sistem	93
+Tabel 4.40 Kebutuhan Fungsional	94
+Tabel 4.41 Kebutuhan Nonfungsional	94
+Tabel 4.42 Deskripsi Use Case Diagram Admin	96
+Tabel 4.43 Deskripsi Use Case Diagram Pengguna	97
+Tabel 4.44 Tabel Users	104
+Tabel 4.45 Pertanyaan Kuesioner	105
+Tabel 4.46 Sesi Kuesioner	105
+Tabel 4.47 Jawaban Kuesioner	106
+Tabel 4.48 Profil Kompetensi	106
+Tabel 4.49 Domain CPL	107
+Tabel 4.50 Relasi Profil CPL	108
+Tabel 4.51 Prediksi Model	108
+Tabel 4.52 Pengetahuan Rekomendasi	109
+Tabel 4.53 Program Studi	110
+Tabel 4.54 Pemetaan Relevansi Program Studi	111
+Tabel 5.1 Lingkungan Implementasi Sistem	125
+Tabel 5.2 Implementasi Tabel Database	127
+Tabel 5.3 Spesifikasi Minimum Perangkat Keras (Hardware)	131
+Tabel 5.4 Spesifikasi Minimum Perangkat Lunak (Software)	131
+Tabel 5.5 Tahapan Instalasi Aplikasi	132
+Tabel 5.6 Tahapan Instalasi Database	133
+Tabel 5.7 Pengujian Black Box pada Pengguna	134
+Tabel 5.8 Pengujian Black Box untuk Admin	135
+Tabel 5.9 Pengujian Black Box Model Machine Learning dan Scoring Engine	136
+Tabel 5.10 Pengujian Aspek Functionality Pengguna	137
+Tabel 5.11 Pengujian Aspek Reliability Pengguna	138
+Tabel 5.12 Pengujian Aspek Usability Pengguna	138
+Tabel 5.13 Pengujian Aspek Efficiency Pengguna	139
+Tabel 5.14 Hasil Pengujian UAT pada Pengguna	139
+"
+c. lalu saya belum melakukan pengujian untuk aplikasi dan model, penguji juga menekankan untuk membuat pengujian untuk model juga selain aplikasi nya. lalu apa berbedaan pengujian aplikasi dan pengujian model
+)
+
+bantu saya menyusun step pertama yang harus saya lakukan dan perbaiki, lalu buat secara perlahan dan ingat harus sesuai dengan model dan aplikasi yang sebenarnya, jangan merubah aplikasi dan model yang sudah selesai saat ini, hanya fokus untuk mengisi laporannya saja.
+
+aku sudah memberikan laporannya berbentuk pdf, baca secara perlahan agar strukturnya tidak keluar jalur dari hasil laporan itu walau itu masih ada revisi seperti yang sudah kita urutkan revisinya di atas.
